@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*font-family: 'Montserrat', sans-serif;*/
+
+
+/*-----------------------------------------------------ESTILOS GLOBALES-------------------------------------------------------------*/
+html {
+    height: 100%;;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #BEA5C0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+h2, p, legend, label {
+    color: #1D1F1F;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5625rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+fieldset {
+    border: 0;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+}
+
+/*-----------------------------------------------------ESTILOS HEADER-------------------------------------------------------------*/
+.hero-image {
+    width: 100%;
+    height: 43.75rem;
+    background-image: url(../assets/img/hero-image-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image .filtro {
+    width: 100%;
+    height: 100%;
+    background-color: #6d47704b;
+}
+
+.texto-logo {
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: .125rem .125rem 0.125rem rgb(0, 0, 0);
+}
+
+.banner-generico {
+    background-color: #1D1F1F;
+    height: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------------------------------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
+nav {
+    background-color: #77527b;
+    box-shadow: 0rem .3125rem 1rem black;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 800; 
+    color: #F4F4EE;
+}
+
+/*-----------------------------------------------------ESTILOS MAIN-------------------------------------------------------------*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4rem;
+    margin: 4rem 0rem;
+}
+
+/*-----------------------------------------------------ESTILOS SECTIONS-------------------------------------------------------------*/
+.seccion-generica {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    border-radius: .9375rem;
+    padding: 2rem;
+    box-shadow: .3125rem .3125rem 0.4rem rgba(0, 0, 0, 0.532);;
+    background-color: #F4F4EE;
+}
+
+.seccion-generica h2 {
+    margin-bottom: 1rem;
+}
+
+/*-----------------------------------------------------ESTILOS LANZAMIENTO Y VIDEOCLIP-------------------------------------------------------------*/
+.seccion-lanzamiento, .seccion-videoclip {
+    display: flex;
+    width: 80%;
+    border-radius: .9375rem;
+    padding: 2rem;
+    box-shadow: .3125rem .3125rem 0.4rem rgba(0, 0, 0, 0.532);;
+}
+
+.seccion-lanzamiento {
+    background-color: #F4F4EE;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 12.5rem;
+}
+
+.iframe-lanzamiento {
+    width: 75%;
+    height: 25rem;
+}
+
+.texto-lanzamiento h2 {
+    padding-bottom: 2rem;
+    text-align: end;
+}
+
+.texto-lanzamiento article, .texto-videoclip article {
+    font-size: 1.5625rem;
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+
+
+.seccion-videoclip h2, .seccion-videoclip article {
+    color: #F4F4EE;
+    padding-bottom: 2rem;
+}
+
+.seccion-videoclip {
+    background-color: #1D1F1F;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.div-videoclip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iframe-videoclip {
+    width: 100rem;
+    height: 56.25rem;
+    border-radius: .9375rem;
+    margin-bottom: 2rem;
+}
+
+.texto-videoclip {
+    width: 60%;;
+}
+
+/*-----------------------------------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
+.seccion-seguinos {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-seguinos h3 {
+    color: #F4F4EE;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.logos-seguinos {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logos-seguinos li a img {
+    height: 3.75rem;
+}
+
+/*-----------------------------------------------------ESTILOS DISCOS-------------------------------------------------------------*/
+.container-discos {
+    margin: 2rem 0rem;
+}
+
+.ul-discos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem;
+}
+
+.ul-discos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35rem;
+    height: 42rem;
+    border-radius: 1.25rem;
+    gap: 1rem;
+    background-color: #e3e3da;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+    border:  .250rem #1d1f1fdb solid;
+}
+
+.ul-discos li p {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container-cortamambo {
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.img-cortamambo {
+    filter: blur(15px);
+}
+
+.ul-discos li img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.ul-discos li a {
+    font-size: 1.25rem;
+    color: #F4F4EE;
+    background-color: #1D1F1F;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    border-radius: .625rem;
+}
+
+/*-----------------------------------------------------ESTILOS SECCION TIENDA-------------------------------------------------------------*/
+.seccion-generica-tienda {
+    overflow: hidden;
+}
+
+.sub-seccion-remeras , .sub-seccion-discos {
+    background-color: #bfa4c2;
+    border-radius: 1.25rem;
+    margin: 2rem 0rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.sub-seccion-remeras ul, .sub-seccion-discos ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.sub-seccion-remeras h3, .sub-seccion-discos h3 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card-tienda {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1.25rem;
+    background-color: #f4f4e9;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+    border:  .250rem #1d1f1fdb solid;
+    overflow: hidden;
+    gap: 1.75rem;
+}
+
+.card-tienda-texto {
+    margin: 1.5rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card-tienda h4 {
+    font-size: 1.75rem;
+}
+.card-tienda .div-precio {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-comprar {
+    border: none;
+    background-color: #77527b;
+    color: #F4F4EE;
+    font-weight: 800;
+    font-size: 1.25rem;
+    padding: .75rem 0rem;
+    width: 9.375rem;
+}
+
+.img-card-tienda {
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+.sub-seccion-discos {
+    background-color: #c895cd;
+}
+
+/*-----------------------------------------------------ESTILOS SECCION SHOWS-------------------------------------------------------------*/
+.lista-shows {
+    width: 90%;
+    margin: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card-show {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 1.25rem;
+    background-color: #f2efef;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+    border:  .250rem #1d1f1fdb solid;
+    overflow: hidden;
+    gap: 1.75rem;
+}
+
+.card-show-reverse {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.fecha-show {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fdfdfb;
+    border-radius: 20px;
+    border: .120rem #1d1f1fdb solid;
+    margin: 2rem;
+}
+
+.dia-semana-show {
+    font-weight: 600;
+}
+
+.dia-show {
+    color:rgb(196, 31, 31);
+    font-size: 4rem;
+    font-weight: 800;
+
+}
+
+.mes-show {
+    font-size: 2rem;
+    font-weight: 800;
+
+}
+
+.anio-show {
+    font-size: 1.5rem;
+    font-weight: 800;
+
+}
+
+.div-precio-show {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.card-show-texto {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin: 3rem 0rem;
+}
+
+.card-show-texto h4 {
+    font-size: 3rem;
+}
+
+.card-show-texto-reverse {
+    align-items: flex-end;
+}
+
+/*-----------------------------------------------------ESTILOS CONTACTO-------------------------------------------------------------*/
+.main-contacto {
+    margin: 0;
+    justify-content: space-between;
+    background-image: url(../assets/img/fondo-contacto-2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.fondo-contacto {
+    width: 100%;
+    height: fit-content;
+    background-color: #1D1F1F;
+    filter: blur(10px);
+}
+
+.formulario-contacto {
+    margin: 3rem;
+    padding: 2rem;
+    width: 50%;
+    background-color: #b9a3b9cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: black 0rem 0rem 2rem;
+}
+
+.formulario-contacto fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.formulario-contacto legend {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.formulario-contacto h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.rellenar-datos {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.formulario-contacto label{
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.input-text-formulario, .formulario-contacto textarea {
+    font-size: 1rem;
+    align-self: center;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.formulario-contacto .btn-enviar {
+    border: none;
+    background-color: #77527b;
+    color: #F4F4EE;
+    font-weight: 800;
+    font-size: 1.25rem;
+    padding: .75rem 0rem;
+    width: 9.375rem;
+    margin: 2rem;
+}
+
+
+
+/*-----------------------------------------------------ESTILOS FOOTER-------------------------------------------------------------*/
+footer {
+    margin-top: auto;
+    background-color: #1D1F1F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    color: #F4F4EE;
+}
