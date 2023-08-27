@@ -108,7 +108,7 @@ nav ul li a {
 }
 
 /*-----------------------------------------------------ESTILOS MAIN-------------------------------------------------------------*/
-main {
+.main-css {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,31 +436,26 @@ main {
 /*-----------------------------------------------------ESTILOS CONTACTO-------------------------------------------------------------*/
 .main-contacto {
     margin: 0;
-    justify-content: space-between;
+
     background-image: url(../assets/img/fondo-contacto-2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.fondo-contacto {
-    width: 100%;
-    height: fit-content;
-    background-color: #1D1F1F;
-    filter: blur(10px);
-}
+
 
 .formulario-contacto {
-    margin: 3rem;
+    background-color: #b9a3b9cb;
+    /* margin: 3rem;
     padding: 2rem;
     width: 50%;
-    background-color: #b9a3b9cb;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: black 0rem 0rem 2rem;
+    box-shadow: black 0rem 0rem 2rem; */
 }
-
+/* 
 .formulario-contacto fieldset {
     display: flex;
     flex-direction: column;
@@ -498,8 +493,9 @@ main {
     padding: 0.5rem;
     width: 100%;
 }
+*/
 
-.formulario-contacto .btn-enviar {
+form div button {
     border: none;
     background-color: #77527b;
     color: #F4F4EE;
@@ -508,8 +504,8 @@ main {
     padding: .75rem 0rem;
     width: 9.375rem;
     margin: 2rem;
-}
-
+} 
+    
 
 
 /*-----------------------------------------------------ESTILOS FOOTER-------------------------------------------------------------*/
@@ -525,4 +521,159 @@ footer {
 footer p {
     font-size: 1.2rem;
     color: #F4F4EE;
+}
+
+@media (max-width: 3840px) {
+
+}
+
+@media (max-width: 2560px) {
+    form div {
+        margin-bottom: 1rem;
+    }
+
+    form legend {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    fieldset h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    form label {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    form div button {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+    form div {
+        margin-bottom: 1rem;
+    }
+
+    form legend {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    fieldset h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    form label {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 1024px) {
+    form div {
+        margin-bottom: 1rem;
+    }
+
+    form legend {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    fieldset h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    form label {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    form div button {
+        padding: .3125rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    form legend {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    fieldset h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    form label, form input, form textarea, form div button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 468px) {
+    form div{
+        margin-bottom: 0.5rem;
+    }
+
+    form legend {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    form h2 {
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    form label, form input, form textarea, form div button {
+        font-size: small;
+    }
+}
+
+@media (max-width: 320px) {
+    form legend {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    form h2 {
+        font-size: 1.025rem;
+    }
+
+    form label, form input, form textarea, form div button {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 280px) {
+    form legend {
+        font-size: 1rem;
+    }
+
+    form h2 {
+        font-size: 0.75rem;
+        font-weight: 400;
+    } 
+
+    form label, form input, form textarea, form div button {
+        font-size: 0.5rem;
+        font-weight: 300;
+    }
+
+    form div button {
+        padding: .3125rem;
+        font-weight: 700;
+    }
 }

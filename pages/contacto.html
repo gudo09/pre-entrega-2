@@ -24,29 +24,50 @@
         </nav>
     </header>
 
-    <main class="main-contacto">
-        <form action="" class="formulario-contacto">
-            <fieldset>
-                <legend>Forlmulario de contacto</legend>
+    <main class="main-contacto container-fluid p-0 min-vh-100">
+        <form action="" class="formulario-contacto container p-0 my-5">
+            <fieldset class="container-fluid m-0 p-lg-3">
+                <legend class="text-center ">Forlmulario de contacto</legend>
                 <h2>Si tienes consultas sobre el estado de tus productos, escribe al proveedor de las tiendas de Cada País seleccionando el formulario en las pestañas.</h2>
-                <section class="rellenar-datos">
-                    <label for="">País</label>
-                    <input type="text" id="pais" placeholder="¿Desde qué país nos escribís?" class="input-text-formulario">
-                    <label for="">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Escribí acá tu/s nombre/s" class="input-text-formulario">
-                    <label for="">Apellido</label>
-                    <input type="text" id="apellido" placeholder="Escribí acá tu/s apellido/s" class="input-text-formulario">                   
-                    <label for="">Correo electrónico</label>
-                    <input type="email" id="e-mail" placeholder="Ingresá tu e-mail" class="input-text-formulario">
-                    <label for="">Teléfono</label>
-                    <input type="tel" id="telefono" placeholder="Escribí acá tu número de teléfono" class="input-text-formulario">
-                    <label for="">Asunto</label>
-                    <input type="text" id="asunto" placeholder="Escribí acá el por qué nos contactás" class="input-text-formulario">
-                    <label for="">Mensaje</label>
-                    <textarea placeholder="Dejanos tu mensaje" name="" id="" cols="30" rows="10"></textarea>
+                <section class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col-12 px-0 d-flex col-xl-4 gap-2 pe-xl-3 col-lg-12">
+                            <label for="">País</label>
+                            <input class="col" type="text" id="pais" placeholder="¿Desde qué país nos escribís?">
+                        </div>
+                        <div class="col-12 px-0 d-flex col-xl-4 gap-2 pe-xl-3 col-lg-6 pe-lg-3">
+                            <label for="">Nombre</label>
+                            <input class="col" type="text" id="nombre" placeholder="Escribí acá tu/s nombre/s">
+                        </div>
+                        <div class="col-12 px-0 d-flex col-xl-4 gap-2 col-lg-6">
+                            <label for="">Apellido</label>
+                            <input class="col" type="text" id="apellido" placeholder="Escribí acá tu/s apellido/s">                   
+                        </div>
+                        <div class="col-12 px-0 d-flex col-xl-6 gap-2 pe-xl-3 col-lg-7 pe-lg-3">
+                            <label class="" for="">Correo electrónico</label>
+                            <input class="col" type="email" id="e-mail" placeholder="Ingresá tu e-mail">
+                        </div>
+                        <div class="col-12 px-0 d-flex col-xl-6 gap-2 col-lg-5">
+                            <label class="" for="">Teléfono</label>
+                            <input class="col" type="tel" id="telefono" placeholder="Escribí acá tu número de teléfono">
+                        </div>
+                        <div class="col-12 px-0 d-flex col-xl-7 gap-2">
+                            <label class="" for="">Asunto</label>
+                            <input class="col" type="text" id="asunto" placeholder="Escribí acá el por qué nos contactás">
+                        </div>
+                        <div class="col-12 px-0 d-flex flex-column col-xl-12">
+                            <label class="col-xl-12" for="">Mensaje</label>
+                            <div class=" col-xl-12 row container-fluid m-0 px-0">
+                                <textarea class="p-0" placeholder="Dejanos tu mensaje" name="" id="" cols="30" rows="10"></textarea>
+                            </div>                        
+                        </div>
+                    </div>
                 </section>
             </fieldset>
-            <button type="submit" class="btn-enviar">Enviar</button>
+            <div class="row d-flex justify-content-center ">
+                <button class="col-4 " type="submit">Enviar</button>
+            </div>
+
         </form>
 
     </main>
