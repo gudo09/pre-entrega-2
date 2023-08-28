@@ -24,7 +24,7 @@ body {
 
 h2, p, legend, label {
     color: #1D1F1F;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 h2 {
@@ -225,10 +225,15 @@ nav ul li a {
 }
 
 .ul-discos {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 4rem;
+    gap: 4rem; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 3rem;
 }
 
 .ul-discos li {
@@ -236,8 +241,8 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35rem;
-    height: 42rem;
+    width: 25rem;
+    height: 35rem;
     border-radius: 1.25rem;
     gap: 1rem;
     background-color: #e3e3da;
@@ -248,11 +253,12 @@ nav ul li a {
 .ul-discos li p {
     font-size: 2rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .container-cortamambo {
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 20rem;
     overflow: hidden;
 }
 
@@ -261,8 +267,8 @@ nav ul li a {
 }
 
 .ul-discos li img {
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 20rem;
 }
 
 .ul-discos li a {
@@ -528,6 +534,7 @@ footer p {
 }
 
 @media (max-width: 2560px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form div {
         margin-bottom: 1rem;
     }
@@ -557,6 +564,7 @@ footer p {
 }
 
 @media (max-width: 1440px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form div {
         margin-bottom: 1rem;
     }
@@ -575,9 +583,15 @@ footer p {
         font-size: 1.25rem;
         font-weight: 400;
     }
+
+    /*----------------------------------listado discos----------------------------------------*/
+    .ul-discos {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 1024px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form div {
         margin-bottom: 1rem;
     }
@@ -602,9 +616,15 @@ footer p {
         font-weight: 700;
         margin-bottom: 1.5rem;
     }
+
+    /*----------------------------------listado discos----------------------------------------*/
+    .ul-discos {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form legend {
         font-size: 2rem;
         font-weight: 700;
@@ -619,9 +639,31 @@ footer p {
     form label, form input, form textarea, form div button {
         font-size: 1rem;
     }
+
+    /*----------------------------------listado discos----------------------------------------*/
+    .titulo-discos {
+        font-size: 2.25rem;
+    }
+
+}
+
+@media (max-width: 530px) {
+    /*----------------------------------listado discos----------------------------------------*/
+    .ul-discos li {
+        width: 20rem;
+        justify-content: start;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .ul-discos li a {
+        margin-bottom: 1.5rem;
+    }
+
 }
 
 @media (max-width: 468px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form div{
         margin-bottom: 0.5rem;
     }
@@ -640,9 +682,44 @@ footer p {
     form label, form input, form textarea, form div button {
         font-size: small;
     }
+
+    /*----------------------------------listado discos----------------------------------------*/
+    .ul-discos{
+        gap: 1rem;
+    }
+
+    .ul-discos li {
+        width: 15rem;
+    }
+
+    .ul-discos li img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .ul-discos li p {
+        font-size: 1.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .ul-discos li a {
+        font-size: 1rem;
+    }
+
+    .seccion-discos {
+        padding: 0;
+    }
+
+    .titulo-discos {
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
 
 @media (max-width: 320px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form legend {
         font-size: 1.3rem;
         font-weight: 700;
@@ -658,6 +735,7 @@ footer p {
 }
 
 @media (max-width: 280px) {
+    /*----------------------------------form contacto----------------------------------------*/
     form legend {
         font-size: 1rem;
     }
