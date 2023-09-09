@@ -1,0 +1,14 @@
+/*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
+.logos-seguinos {
+  @include width-height(100%,7rem);
+  display: flex;
+  @include alignI-justifyC(center,space-evenly);
+  li { 
+    a { 
+      img {
+          height: 5rem;
+      }
+    }
+  }
+  
+}

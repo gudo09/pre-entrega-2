@@ -1,0 +1,52 @@
+/*------------------------ESTILOS SECCION LANZAMIENTOS-------------------------------------------------------------*/
+.seccion-lanzamiento {
+  display: flex;
+  width: 80%;
+  border-radius: .9375rem;
+  padding: 2rem;
+  box-shadow: 0.3125rem 0.3125rem 0.4rem rgba(black,.532);
+  background-color: $color-blanco;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 12.5rem;
+  div {
+    h2 {
+      padding-bottom: 2rem;
+      text-align: end;
+      font-size: 2.3rem;
+    }
+    article {
+      font-size: 1.5625rem;
+      text-align: justify;
+      padding-bottom: 2rem;
+    }
+  }
+  iframe {
+    @include width-height(100rem,22rem);
+    border-radius: .75rem;
+  }
+}
+.seccion-videoclip {
+  @extend .seccion-lanzamiento;
+  background-color: $color-negro;
+  flex-direction: column;
+  gap: 0rem;
+  .div-videoclip{
+    width: 100%;
+  }
+  div {
+    h2 {
+      color: $color-blanco;
+      padding-bottom: 2rem;
+    }
+    article {
+      @extend h2;
+      width: 60%;
+    }
+    iframe {
+      width: 100%;
+      height: 45rem;
+      border-radius: 0.9375rem;
+    }
+  }
+}

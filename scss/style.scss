@@ -1,0 +1,39 @@
+//first run on terminal "sass --watch ./scss/style.scss ./css/style.css"
+
+//UTILITIES IMPORTS
+@import "./utilities/variables",
+        "./utilities/mixins";
+
+//BASE IMPORTS
+@import "./base/typo",
+        "./base/reset"
+        ;
+
+//LAYOUT IMPORTS
+@import "./layout/header",
+        "./layout/navbar",
+        "./layout/main/main-css",
+        "./layout/main/main-index",
+        "./layout/sections/seccion-seguinos",
+        "./layout/sections/seccion-lanzamientos",
+        "./layout/footer"
+        ;
+
+//COMPONENTS IMPORTS
+@import "./components/cards",
+        "./components/botones",
+        "./components/logos-seguinos"
+        ;
+
+//MEDIA IMPORTS
+@import "./layout/media/media3840",
+        "./layout/media/media2560",
+        "./layout/media/media1920",
+        "./layout/media/media1440",
+        "./layout/media/media1024",
+        "./layout/media/media768",
+        "./layout/media/media530",
+        "./layout/media/media468",
+        "./layout/media/media320",
+        "./layout/media/media280"
+        ;

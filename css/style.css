@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*------------------------RESETEOS GLOBALES-----------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-image: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
+  font-family: "Montserrat", sans-serif;
+}
+
+h2, .seccion-videoclip div article, p, legend, label {
+  color: #1d1f1f;
+}
+
+p {
+  font-size: 1.5625rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+fieldset {
+  border: 0;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+/*------------------------ESTILOS HEADER-------------------------------------------------------------*/
+.hero-image {
+  width: 100%;
+  height: 43.75rem;
+  background-image: url(../../assets/img/hero-image-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero-image .filtro {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(109, 71, 112, 0.2941176471);
+}
+
+.texto-logo {
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.125rem black;
+}
+
+.banner-generico {
+  background-color: #1d1f1f;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
+nav {
+  background-color: #77527b;
+  box-shadow: 0rem 0.125rem 1rem black;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  width: 80%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav ul li a {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 800;
+  color: #f4f4ee;
+}
+nav ul li a:hover {
+  font-size: 2rem;
+  transition: font-size 0.08s;
+  cursor: pointer;
+  text-shadow: 0px 0px 20px #38203b;
+}
+
+/*------------------------ESTILOS MAIN-------------------------------------------------------------*/
+.main-css {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem;
+  margin: 4rem 0rem;
+}
+
+/*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
+.seccion-seguinos {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seccion-seguinos h3 {
+  color: #f4f4ee;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/*------------------------ESTILOS SECCION LANZAMIENTOS-------------------------------------------------------------*/
+.seccion-lanzamiento, .seccion-videoclip {
+  display: flex;
+  width: 80%;
+  border-radius: 0.9375rem;
+  padding: 2rem;
+  box-shadow: 0.3125rem 0.3125rem 0.4rem rgba(0, 0, 0, 0.532);
+  background-color: #f4f4ee;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 12.5rem;
+}
+.seccion-lanzamiento div h2, .seccion-videoclip div h2, .seccion-videoclip div article {
+  padding-bottom: 2rem;
+  text-align: end;
+  font-size: 2.3rem;
+}
+.seccion-lanzamiento div article, .seccion-videoclip div article {
+  font-size: 1.5625rem;
+  text-align: justify;
+  padding-bottom: 2rem;
+}
+.seccion-lanzamiento iframe, .seccion-videoclip iframe {
+  width: 100rem;
+  height: 22rem;
+  border-radius: 0.75rem;
+}
+
+.seccion-videoclip {
+  background-color: #1d1f1f;
+  flex-direction: column;
+  gap: 0rem;
+}
+.seccion-videoclip .div-videoclip {
+  width: 100%;
+}
+.seccion-videoclip div h2, .seccion-videoclip div article {
+  color: #f4f4ee;
+  padding-bottom: 2rem;
+}
+.seccion-videoclip div article {
+  width: 60%;
+}
+.seccion-videoclip div iframe {
+  width: 100%;
+  height: 45rem;
+  border-radius: 0.9375rem;
+}
+
+/*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
+footer {
+  background-color: #1d1f1f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+footer p {
+  font-size: 1.2rem;
+  color: #f4f4ee;
+}
+
+/*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
+.logos-seguinos {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logos-seguinos li a img {
+  height: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

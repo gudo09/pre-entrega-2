@@ -1,0 +1,5 @@
+/*------------------------ESTILOS MAIN-------------------------------------------------------------*/
+.main-css {
+  @include flex-full-gap(column,nowrap,center,space-evenly,4rem);
+  margin: 4rem 0rem;
+}
