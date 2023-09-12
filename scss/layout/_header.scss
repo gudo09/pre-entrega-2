@@ -1,29 +1,32 @@
 /*------------------------ESTILOS HEADER-------------------------------------------------------------*/
-.hero-image {
-  @include width-height(100%,43.75rem);
-  background: {
-    image: url(../../assets/img/hero-image-2.jpg);
-    repeat: no-repeat;
-    size: cover;
-    position: center;
+header {
+  .hero-image {
+    @include width-height(100%,40rem);
+    background: {
+      image: url(../../assets/img/hero-image-2.jpg);
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    .filtro {
+      @include width-height(100%,100%);
+      background-color: $color-filtro-hero-image;
+    }
   }
-  .filtro {
-    @include width-height(100%,100%);
-    background-color: $color-filtro-hero-image;
+  .banner-generico {
+    background-color: $color-negro;
+    height: 9rem;
+    display: flex;
+    @include alignI-justifyC(center,center);
   }
-}
-.texto-logo {
-  font: {
-    style: italic;
-    size: 3rem;
-    weight: 900;
+  h1 {
+    margin-bottom: 0;
+    font: {
+      style: italic;
+      size: 3rem;
+      weight: 900;
+    }
+    color: white;
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
   }
-  color: white;
-  text-shadow: 0.125rem 0.125rem 0.125rem black;
-}
-.banner-generico {
-  background-color: $color-negro;
-  height: 9rem;
-  display: flex;
-  @include alignI-justifyC(center,center);
 }

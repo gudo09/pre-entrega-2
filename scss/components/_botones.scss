@@ -1,0 +1,13 @@
+/*------------------------ESTILOS BOTONES-------------------------------------------------------------*/
+form div button {
+  width: 9.375rem;
+  margin: 2rem;
+  padding: 0.75rem 0rem;
+  border: none;
+  background-color: $color-boton-formulario;
+  color: $color-blanco;
+  font: {
+    weight: 800;
+    size: 1.25rem;
+  }
+}

@@ -1,9 +1,11 @@
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
 footer {
+  height: 2.25rem;
+  margin-top: auto !important;
   background-color: $color-negro;
   @include flex(row,nowrap,center,center);
-  margin-top: auto;
   p {
+    margin: 0;
     font-size: 1.2rem;
     color: $color-blanco;
   }

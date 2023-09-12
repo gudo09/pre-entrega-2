@@ -1,0 +1,56 @@
+/*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
+.formulario-contacto {
+  @include flex-direction(column);
+  align-items: center;
+  width: 60%;
+  padding: 2rem;
+  background-color: $color-fondo-formulario-contacto;
+  box-shadow: black 0rem 0rem 2rem;
+
+  fieldset {
+    @include flex-direction(column);
+    align-items: center;
+    gap: 1.5rem;
+
+    legend {
+      font: {
+        size: 3rem;
+        weight: 700;
+      }
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    label{
+      margin: {
+        top: 1rem;
+        bottom: 0.25rem;
+      }
+      font: {
+        size: 1.5rem;
+        weight: 500;
+      }
+    }
+
+    section>div>div {
+      margin-bottom: 1rem;
+    }
+  
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      align-self: center;
+      font-size: 1rem;
+    }
+  }
+
+  .form-mensaje {
+    margin-top: -0.4rem;
+  }
+
+}
+

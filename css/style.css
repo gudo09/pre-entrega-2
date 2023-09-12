@@ -4,14 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   background-image: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
-  font-family: "Montserrat", sans-serif;
 }
 
 h2, .seccion-videoclip div article, p, legend, label {
@@ -39,35 +39,48 @@ textarea {
   resize: none;
 }
 
+/*------------------------RESETEOS BOOTSTRAP-----------------------------------------------------*/
+h1, ul, p, footer {
+  line-height: 1;
+}
+
+p {
+  text-size-adjust: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
 /*------------------------ESTILOS HEADER-------------------------------------------------------------*/
-.hero-image {
+header .hero-image {
   width: 100%;
-  height: 43.75rem;
+  height: 40rem;
   background-image: url(../../assets/img/hero-image-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.hero-image .filtro {
+header .hero-image .filtro {
   width: 100%;
   height: 100%;
   background-color: rgba(109, 71, 112, 0.2941176471);
 }
-
-.texto-logo {
-  font-style: italic;
-  font-size: 3rem;
-  font-weight: 900;
-  color: white;
-  text-shadow: 0.125rem 0.125rem 0.125rem black;
-}
-
-.banner-generico {
+header .banner-generico {
   background-color: #1d1f1f;
   height: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+header h1 {
+  margin-bottom: 0;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.125rem black;
 }
 
 /*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
@@ -108,9 +121,18 @@ nav ul li a:hover {
   margin: 4rem 0rem;
 }
 
+/*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
+.main-contacto {
+  background-image: url(../assets/img/fondo-contacto-2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-height: 100%;
+}
+
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
 .seccion-seguinos {
-  width: 40%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,17 +194,75 @@ nav ul li a:hover {
 
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
 footer {
+  height: 2.25rem;
+  margin-top: auto !important;
   background-color: #1d1f1f;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
 }
 footer p {
+  margin: 0;
   font-size: 1.2rem;
   color: #f4f4ee;
+}
+
+/*------------------------ESTILOS BOTONES-------------------------------------------------------------*/
+form div button {
+  width: 9.375rem;
+  margin: 2rem;
+  padding: 0.75rem 0rem;
+  border: none;
+  background-color: #77527b;
+  color: #f4f4ee;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+/*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 2rem;
+  background-color: rgba(185, 163, 185, 0.7960784314);
+  box-shadow: black 0rem 0rem 2rem;
+}
+.formulario-contacto fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.formulario-contacto fieldset legend {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+.formulario-contacto fieldset h2, .formulario-contacto fieldset .seccion-videoclip div article, .seccion-videoclip div .formulario-contacto fieldset article {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.formulario-contacto fieldset label {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.formulario-contacto fieldset section > div > div {
+  margin-bottom: 1rem;
+}
+.formulario-contacto fieldset textarea {
+  width: 100%;
+  padding: 0.5rem;
+  align-self: center;
+  font-size: 1rem;
+}
+.formulario-contacto .form-mensaje {
+  margin-top: -0.4rem;
 }
 
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
@@ -194,7 +274,7 @@ footer p {
   justify-content: space-evenly;
 }
 .logos-seguinos li a img {
-  height: 5rem;
+  height: 4.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
