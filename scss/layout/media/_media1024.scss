@@ -1,0 +1,39 @@
+@media (max-width: 1024px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form {
+    div {
+      margin-bottom: 1rem;
+      button {
+        margin-bottom: 1.5rem;
+        padding: 0.3125rem;
+        font-weight: 700;
+      }
+    }
+  
+    legend {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+  
+    fieldset {
+      h2 {
+        font: {
+          size: 2rem;
+          weight: 500;
+        }
+      }
+    }
+  
+    label {
+      font: {
+        size: 1.25rem;
+        weight: 400;
+      }
+    }
+  }
+  
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    grid-template-columns: 1fr;
+  }
+}

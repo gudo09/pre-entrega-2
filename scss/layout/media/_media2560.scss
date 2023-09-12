@@ -1,0 +1,35 @@
+@media (max-width: 2560px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form {
+    fieldset {
+      legend {
+        font: {
+          size: 3rem;
+          weight: 600;
+        }
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+        font: {
+          size: 2rem;
+          weight: 500;
+        }
+      }
+
+      label {
+        font: {
+          size: 1.25rem;
+          weight: 400;
+        }
+      }
+    }
+
+    div {
+      margin-bottom: 1rem;
+      button {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

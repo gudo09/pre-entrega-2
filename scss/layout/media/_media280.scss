@@ -1,0 +1,27 @@
+@media (max-width: 280px) {
+  form {
+    legend {
+      font-size: 1rem;
+    }
+    
+    h2 {
+      font: {
+        weight: 400;
+        size: 0.75rem;
+      }
+    }
+  
+    label,input,textarea,
+    div button {
+      font-size: 0.5rem;
+      font-weight: 300;
+    }
+    div button {
+      padding: 0.3125rem;
+      font-weight: 700;
+    }
+  }
+}
+
+
+

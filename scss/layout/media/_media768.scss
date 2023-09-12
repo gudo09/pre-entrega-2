@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  /*----------------------------------navbar----------------------------------------*/
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  /*----------------------------------form contacto----------------------------------------*/
+  form {
+    legend {
+      font: {
+        size: 2rem;
+        weight: 700;
+      }
+    }
+    
+    fieldset {
+      h2 {
+        text-align: left;
+        font: {
+          size: 1.3rem;
+          weight: 500;
+        }
+      }
+    }
+
+    label, input, textarea {
+      font-size: 1rem;
+    }
+
+    div {
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /*----------------------------------listado discos----------------------------------------*/
+  .titulo-discos {
+    font-size: 2.25rem;
+  }
+
+  /*----------------------------------footer----------------------------------------*/
+  footer{
+    p {
+      font-size: 0.87rem;
+    }
+  }
+}

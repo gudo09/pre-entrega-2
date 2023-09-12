@@ -1,0 +1,36 @@
+@media (max-width: 530px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  /*----------------------------------navbar----------------------------------------*/
+  nav {
+    ul {
+      flex-direction: column;
+      height: 200px;
+    }
+  }
+
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    li {
+      width: 20rem;
+      justify-content: start;
+      overflow: hidden;
+      height: auto;
+      a {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  /*----------------------------------footer----------------------------------------*/
+  footer {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}

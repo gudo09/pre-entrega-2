@@ -40,7 +40,8 @@
       padding-bottom: 2rem;
     }
     article {
-      @extend h2;
+      color: $color-blanco;
+      padding-bottom: 2rem;
       width: 60%;
     }
     iframe {

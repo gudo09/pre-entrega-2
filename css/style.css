@@ -14,7 +14,7 @@ body {
   background-image: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
 }
 
-h2, .seccion-videoclip div article, p, legend, label {
+h2, p, legend, label {
   color: #1d1f1f;
 }
 
@@ -123,11 +123,11 @@ nav ul li a:hover {
 
 /*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
 .main-contacto {
+  height: 100%;
   background-image: url(../assets/img/fondo-contacto-2.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-height: 100%;
 }
 
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
@@ -155,7 +155,7 @@ nav ul li a:hover {
   justify-content: space-between;
   gap: 12.5rem;
 }
-.seccion-lanzamiento div h2, .seccion-videoclip div h2, .seccion-videoclip div article {
+.seccion-lanzamiento div h2, .seccion-videoclip div h2 {
   padding-bottom: 2rem;
   text-align: end;
   font-size: 2.3rem;
@@ -179,11 +179,13 @@ nav ul li a:hover {
 .seccion-videoclip .div-videoclip {
   width: 100%;
 }
-.seccion-videoclip div h2, .seccion-videoclip div article {
+.seccion-videoclip div h2 {
   color: #f4f4ee;
   padding-bottom: 2rem;
 }
 .seccion-videoclip div article {
+  color: #f4f4ee;
+  padding-bottom: 2rem;
   width: 60%;
 }
 .seccion-videoclip div iframe {
@@ -242,7 +244,7 @@ form div button {
   font-weight: 700;
   text-align: center;
 }
-.formulario-contacto fieldset h2, .formulario-contacto fieldset .seccion-videoclip div article, .seccion-videoclip div .formulario-contacto fieldset article {
+.formulario-contacto fieldset h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
@@ -252,14 +254,15 @@ form div button {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.formulario-contacto fieldset section > div > div {
-  margin-bottom: 1rem;
-}
 .formulario-contacto fieldset textarea {
   width: 100%;
   padding: 0.5rem;
   align-self: center;
   font-size: 1rem;
+  text-indent: 10px;
+}
+.formulario-contacto fieldset section > div > div {
+  margin-bottom: 1rem;
 }
 .formulario-contacto .form-mensaje {
   margin-top: -0.4rem;
@@ -275,6 +278,231 @@ form div button {
 }
 .logos-seguinos li a img {
   height: 4.25rem;
+}
+
+/*----------------------------------MEDIA QUERIES----------------------------------------*/
+@media (max-width: 2560px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form fieldset legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form fieldset h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form fieldset label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  form div {
+    margin-bottom: 1rem;
+  }
+  form div button {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (max-width: 1440px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form div {
+    margin-bottom: 1rem;
+  }
+  form legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form div {
+    margin-bottom: 1rem;
+  }
+  form div button {
+    margin-bottom: 1.5rem;
+    padding: 0.3125rem;
+    font-weight: 700;
+  }
+  form legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form fieldset h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 2.5rem;
+  }
+  /*----------------------------------navbar----------------------------------------*/
+  nav ul li a {
+    font-size: 1rem;
+  }
+  /*----------------------------------form contacto----------------------------------------*/
+  form legend {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  form fieldset h2 {
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  form label, form input, form textarea {
+    font-size: 1rem;
+  }
+  form div button {
+    font-size: 1rem;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .titulo-discos {
+    font-size: 2.25rem;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer p {
+    font-size: 0.87rem;
+  }
+}
+@media (max-width: 530px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 2rem;
+  }
+  /*----------------------------------navbar----------------------------------------*/
+  nav ul {
+    flex-direction: column;
+    height: 200px;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos li {
+    width: 20rem;
+    justify-content: start;
+    overflow: hidden;
+    height: auto;
+  }
+  .ul-discos li a {
+    margin-bottom: 1.5rem;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 468px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 1.5rem;
+  }
+  /*----------------------------------form contacto----------------------------------------*/
+  form div {
+    margin-bottom: 0.5rem;
+  }
+  form legend {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  form label, form input, form textarea {
+    font-size: small;
+  }
+  form div button {
+    font-size: small;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .seccion-discos {
+    padding: 0;
+  }
+  .seccion-discos .ul-discos {
+    gap: 1rem;
+  }
+  .seccion-discos .ul-discos li {
+    width: 15rem;
+  }
+  .seccion-discos .ul-discos li img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .seccion-discos .ul-discos li p {
+    font-size: 1.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .seccion-discos .ul-discos li a {
+    font-size: 1rem;
+  }
+  .seccion-discos h2 {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer {
+    height: 30px;
+  }
+  footer p {
+    font-size: 0.57rem;
+  }
+}
+@media (max-width: 320px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form legend {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  form h2 {
+    font-size: 1.025rem;
+  }
+  form label, form input, form textarea {
+    font-size: 0.75rem;
+  }
+  form div button {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 280px) {
+  form legend {
+    font-size: 1rem;
+  }
+  form h2 {
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  form label, form input, form textarea,
+  form div button {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+  form div button {
+    padding: 0.3125rem;
+    font-weight: 700;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
