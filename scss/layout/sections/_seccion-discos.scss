@@ -1,0 +1,10 @@
+/*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
+.seccion-discos {
+  >.container-discos {
+    margin: 2rem 0rem;
+
+    .ul-discos {
+      @include mixin-grid(3, center, 3rem);
+    }
+  }
+}

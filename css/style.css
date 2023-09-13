@@ -130,6 +130,17 @@ nav ul li a:hover {
   background-position: center;
 }
 
+/*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
+.seccion-discos > .container-discos {
+  margin: 2rem 0rem;
+}
+.seccion-discos > .container-discos .ul-discos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 3rem;
+}
+
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
 .seccion-seguinos {
   width: 60%;
@@ -209,6 +220,50 @@ footer p {
   margin: 0;
   font-size: 1.2rem;
   color: #f4f4ee;
+}
+
+/*------------------------ESTILOS CARDS-------------------------------------------------------------*/
+/*------------------------CARDS DISCOS-------------------------------------------------------------*/
+.ul-discos li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 25rem;
+  height: 35rem;
+  border-style: solid;
+  border-radius: 1.25rem;
+  border-color: rgba(29, 31, 31, 0.8588235294);
+  border-width: 0.25rem;
+  background-color: #e3e3da;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+}
+.ul-discos li p {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.ul-discos li img {
+  width: 20rem;
+  height: 20rem;
+}
+.ul-discos li a {
+  padding: 1rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 0.625rem;
+  background-color: #1d1f1f;
+  color: #f4f4ee;
+}
+.ul-discos li .container-cortamambo {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+.ul-discos li .container-cortamambo img {
+  filter: blur(15px);
 }
 
 /*------------------------ESTILOS BOTONES-------------------------------------------------------------*/

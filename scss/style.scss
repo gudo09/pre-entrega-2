@@ -15,6 +15,7 @@
         "./layout/main/main-css",
         "./layout/main/main-index",
         "./layout/main/main-contacto",
+        "./layout/sections/seccion-discos",
         "./layout/sections/seccion-seguinos",
         "./layout/sections/seccion-lanzamientos",
         "./layout/footer"
@@ -29,14 +30,14 @@
 
 //MEDIA IMPORTS
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
-@import "./layout/media/media3840",
-        "./layout/media/media2560",
-        "./layout/media/media1920",
-        "./layout/media/media1440",
-        "./layout/media/media1024",
-        "./layout/media/media768",
-        "./layout/media/media530",
-        "./layout/media/media468",
-        "./layout/media/media320",
-        "./layout/media/media280"
-        ;
+  @import "./layout/media/media3840",
+          "./layout/media/media2560",
+          "./layout/media/media1920",
+          "./layout/media/media1440",
+          "./layout/media/media1024",
+          "./layout/media/media768",
+          "./layout/media/media530",
+          "./layout/media/media468",
+          "./layout/media/media320",
+          "./layout/media/media280"
+          ;

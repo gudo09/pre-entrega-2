@@ -34,3 +34,10 @@
   width: $width;
   height: $height;
 }
+
+@mixin mixin-grid ($columnas, $justify-items, $row-gap) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  justify-items: $justify-items;
+  row-gap: $row-gap;
+}
