@@ -4,15 +4,23 @@
 .ul-discos li {
   @include flex-full-gap(column,nowrap,center,center,1rem);
   @include width-height(25rem,35rem);
-  //border: 0.25rem #1d1f1fdb solid;
+  background: {
+    color: $color-blanco;
+    image: $color-fondo-card-discografia;
+  }
   border: {
     style: solid;
     radius: 1.25rem;
     color: $color-borde-card-disco;
     width: 0.25rem;
   }
-  background-color: #e3e3da;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
 
   p {
     font: {

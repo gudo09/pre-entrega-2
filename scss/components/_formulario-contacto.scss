@@ -6,6 +6,7 @@
   padding: 2rem;
   background-color: $color-fondo-formulario-contacto;
   box-shadow: black 0rem 0rem 2rem;
+  backdrop-filter: blur( 0.125rem );
 
   fieldset {
     @include flex-direction(column);
@@ -18,39 +19,49 @@
         weight: 700;
       }
       text-align: center;
-    }
-
-    h2 {
       margin-top: 1rem;
+    }
+    
+    >h2 {
       font-size: 1.5rem;
     }
-    
-    label{
-      margin: {
-        top: 1rem;
-        bottom: 0.25rem;
+
+    >section {
+      >div {
+        >div {
+          margin: 0.5rem 0 ;
+          display: flex;
+          align-items : center;
+
+          label {
+            font: {
+              size: 1.2rem;
+              weight: 500;
+            }
+          }
+
+          input {
+            height: 3rem;
+            text-indent: 0.5rem;
+          }
+
+          >div {
+            >textarea {
+              margin-top: 0.5rem;
+              padding: 0;
+              text-indent: 0.7rem;
+              padding-top: 0.7rem;
+              font-size: 1rem;
+            }
+          }
+        }
       }
-      font: {
-        size: 1.5rem;
-        weight: 500;
-      }
-    }
-    
-    textarea {
-      width: 100%;
-      padding: 0.5rem;
-      align-self: center;
-      font-size: 1rem;
-      text-indent: 10px;
     }
 
-    section>div>div {
-      margin-bottom: 1rem;
-    }
-  }
 
-  .form-mensaje {
-    margin-top: -0.4rem;
+
+
+
   }
 }
 

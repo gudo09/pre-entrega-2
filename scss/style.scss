@@ -18,26 +18,29 @@
         "./layout/sections/seccion-discos",
         "./layout/sections/seccion-seguinos",
         "./layout/sections/seccion-lanzamientos",
+        "./layout/sections/seccion-tienda",
         "./layout/footer"
         ;
 
 //COMPONENTS IMPORTS
-@import "./components/cards",
-        "./components/botones",
+@import "./components/cards/card-discografia",
+        "./components/cards/card-tienda",
+        "./components/botones/boton-enviar-formulario",
+        "./components/botones/boton-tienda-comprar",
         "./components/formulario-contacto",
         "./components/logos-seguinos"
         ;
 
 //MEDIA IMPORTS
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
-  @import "./layout/media/media3840",
-          "./layout/media/media2560",
-          "./layout/media/media1920",
-          "./layout/media/media1440",
-          "./layout/media/media1024",
-          "./layout/media/media768",
-          "./layout/media/media530",
-          "./layout/media/media468",
-          "./layout/media/media320",
-          "./layout/media/media280"
-          ;
+//@import "./layout/media/media3840",
+//        "./layout/media/media2560",
+//        "./layout/media/media1920",
+//        "./layout/media/media1440",
+//        "./layout/media/media1024",
+//        "./layout/media/media768",
+//        "./layout/media/media530",
+//        "./layout/media/media468",
+//        "./layout/media/media320",
+//        "./layout/media/media280"
+//        ;

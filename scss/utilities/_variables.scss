@@ -1,10 +1,25 @@
-$color-fondo-body: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
+//colores basicos
 $color-negro: #1d1f1f;
 $color-blanco: #f4f4ee;
 $color-sombra: rgba(0, 0, 0, 0.532);
+
+//fondos
+$color-fondo-body: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
+$color-fondo-formulario-contacto: #b9a3b9cb;
+$color-fondo-card-tienda: $color-blanco;
+$color-fondo-card-discografia: linear-gradient(45deg, #f4f4ee 26%, #695c6f 100%);
+$color-fondo-tienda-div: #f8f5f8;
+$color-fondo-sub-seccion-discos: #dcbae0;
+
+//color filtro hero image
 $color-filtro-hero-image: #6d47704b;
+
+//colores navbar
 $color-navbar: #77527b;
 $color-sombra-navbar: #38203b;
+
+//colores botones
 $color-boton-formulario: $color-navbar;
-$color-fondo-formulario-contacto: #b9a3b9cb;
-$color-borde-card-disco: #1d1f1fdb;
+$color-boton-comprar-tienda: $color-navbar;
+$color-borde-card-disco: #2d2d2d;
+$color-borde-card-tienda: $color-borde-card-disco;

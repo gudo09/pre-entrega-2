@@ -104,10 +104,12 @@ nav ul li a {
   color: #f4f4ee;
 }
 nav ul li a:hover {
-  font-size: 2rem;
-  transition: font-size 0.08s;
-  cursor: pointer;
   text-shadow: 0px 0px 20px #38203b;
+  cursor: pointer;
+}
+nav ul li:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
 }
 
 /*------------------------ESTILOS MAIN-------------------------------------------------------------*/
@@ -136,9 +138,10 @@ nav ul li a:hover {
 }
 .seccion-discos > .container-discos .ul-discos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   row-gap: 3rem;
+  column-gap: 2rem;
 }
 
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
@@ -205,6 +208,46 @@ nav ul li a:hover {
   border-radius: 0.9375rem;
 }
 
+.seccion-tienda {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0rem;
+}
+.seccion-tienda h2 {
+  font-size: 3rem;
+}
+.seccion-tienda .sub-seccion-remeras, .seccion-tienda .sub-seccion-discos {
+  margin: 2rem 0rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: rgba(248, 245, 248, 0.3);
+  backdrop-filter: blur(0.125rem);
+  border-radius: 1.25rem;
+}
+.seccion-tienda .sub-seccion-discos {
+  background-color: rgba(220, 186, 224, 0.6);
+}
+.seccion-tienda > div > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  width: 100%;
+}
+.seccion-tienda > div > h3 {
+  margin-bottom: 3rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-align: center;
+}
+
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
 footer {
   height: 2.25rem;
@@ -233,12 +276,18 @@ footer p {
   gap: 1rem;
   width: 25rem;
   height: 35rem;
+  background-color: #f4f4ee;
+  background-image: linear-gradient(45deg, #f4f4ee 26%, #695c6f 100%);
   border-style: solid;
   border-radius: 1.25rem;
-  border-color: rgba(29, 31, 31, 0.8588235294);
+  border-color: #2d2d2d;
   border-width: 0.25rem;
-  background-color: #e3e3da;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+  overflow: hidden;
+}
+.ul-discos li:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
 }
 .ul-discos li p {
   font-size: 2rem;
@@ -266,6 +315,53 @@ footer p {
   filter: blur(15px);
 }
 
+/*------------------------cards tienda-------------------------------------------------------------*/
+.seccion-tienda > div > ul > .card-tienda {
+  width: 45rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  border-style: solid;
+  border-radius: 1.25rem;
+  border-color: #2d2d2d;
+  border-width: 0.25rem;
+  background-color: #f4f4ee;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+  overflow: hidden;
+}
+.seccion-tienda > div > ul > .card-tienda .img-card-tienda {
+  width: 18.75rem;
+  height: 18.75rem;
+  object-fit: cover;
+}
+.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto {
+  width: 70%;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > h4 {
+  font-size: 1.75rem;
+}
+.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > .div-precio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > .div-precio > .valor-precio {
+  font-weight: 700;
+}
+
 /*------------------------ESTILOS BOTONES-------------------------------------------------------------*/
 form div button {
   width: 9.375rem;
@@ -278,6 +374,16 @@ form div button {
   font-size: 1.25rem;
 }
 
+.btn-comprar {
+  border: none;
+  background-color: #77527b;
+  color: #f4f4ee;
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 0.75rem 0rem;
+  width: 9.375rem;
+}
+
 /*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
 .formulario-contacto {
   display: flex;
@@ -287,6 +393,7 @@ form div button {
   padding: 2rem;
   background-color: rgba(185, 163, 185, 0.7960784314);
   box-shadow: black 0rem 0rem 2rem;
+  backdrop-filter: blur(0.125rem);
 }
 .formulario-contacto fieldset {
   display: flex;
@@ -298,29 +405,30 @@ form div button {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
-}
-.formulario-contacto fieldset h2 {
   margin-top: 1rem;
+}
+.formulario-contacto fieldset > h2 {
   font-size: 1.5rem;
 }
-.formulario-contacto fieldset label {
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-  font-size: 1.5rem;
+.formulario-contacto fieldset > section > div > div {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.formulario-contacto fieldset > section > div > div label {
+  font-size: 1.2rem;
   font-weight: 500;
 }
-.formulario-contacto fieldset textarea {
-  width: 100%;
-  padding: 0.5rem;
-  align-self: center;
+.formulario-contacto fieldset > section > div > div input {
+  height: 3rem;
+  text-indent: 0.5rem;
+}
+.formulario-contacto fieldset > section > div > div > div > textarea {
+  margin-top: 0.5rem;
+  padding: 0;
+  text-indent: 0.7rem;
+  padding-top: 0.7rem;
   font-size: 1rem;
-  text-indent: 10px;
-}
-.formulario-contacto fieldset section > div > div {
-  margin-bottom: 1rem;
-}
-.formulario-contacto .form-mensaje {
-  margin-top: -0.4rem;
 }
 
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
@@ -334,230 +442,11 @@ form div button {
 .logos-seguinos li a img {
   height: 4.25rem;
 }
+.logos-seguinos li:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
 
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
-@media (max-width: 2560px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form fieldset legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form fieldset h2 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  form fieldset label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  form div {
-    margin-bottom: 1rem;
-  }
-  form div button {
-    margin-bottom: 2.5rem;
-  }
-}
-@media (max-width: 1440px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form div {
-    margin-bottom: 1rem;
-  }
-  form legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form h2 {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  form label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 1024px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form div {
-    margin-bottom: 1rem;
-  }
-  form div button {
-    margin-bottom: 1.5rem;
-    padding: 0.3125rem;
-    font-weight: 700;
-  }
-  form legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form fieldset h2 {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  form label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 768px) {
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 2.5rem;
-  }
-  /*----------------------------------navbar----------------------------------------*/
-  nav ul li a {
-    font-size: 1rem;
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form legend {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  form fieldset h2 {
-    text-align: left;
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-  form label, form input, form textarea {
-    font-size: 1rem;
-  }
-  form div button {
-    font-size: 1rem;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .titulo-discos {
-    font-size: 2.25rem;
-  }
-  /*----------------------------------footer----------------------------------------*/
-  footer p {
-    font-size: 0.87rem;
-  }
-}
-@media (max-width: 530px) {
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 2rem;
-  }
-  /*----------------------------------navbar----------------------------------------*/
-  nav ul {
-    flex-direction: column;
-    height: 200px;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos li {
-    width: 20rem;
-    justify-content: start;
-    overflow: hidden;
-    height: auto;
-  }
-  .ul-discos li a {
-    margin-bottom: 1.5rem;
-  }
-  /*----------------------------------footer----------------------------------------*/
-  footer p {
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 468px) {
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 1.5rem;
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form div {
-    margin-bottom: 0.5rem;
-  }
-  form legend {
-    font-size: 1.75rem;
-    font-weight: 700;
-  }
-  form h2 {
-    margin-bottom: 1rem;
-    font-size: 1.15rem;
-    font-weight: 500;
-  }
-  form label, form input, form textarea {
-    font-size: small;
-  }
-  form div button {
-    font-size: small;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .seccion-discos {
-    padding: 0;
-  }
-  .seccion-discos .ul-discos {
-    gap: 1rem;
-  }
-  .seccion-discos .ul-discos li {
-    width: 15rem;
-  }
-  .seccion-discos .ul-discos li img {
-    width: 15rem;
-    height: 15rem;
-  }
-  .seccion-discos .ul-discos li p {
-    font-size: 1.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  .seccion-discos .ul-discos li a {
-    font-size: 1rem;
-  }
-  .seccion-discos h2 {
-    margin-top: 2rem;
-    font-size: 1.75rem;
-    text-align: center;
-  }
-  /*----------------------------------footer----------------------------------------*/
-  footer {
-    height: 30px;
-  }
-  footer p {
-    font-size: 0.57rem;
-  }
-}
-@media (max-width: 320px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form legend {
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-  form h2 {
-    font-size: 1.025rem;
-  }
-  form label, form input, form textarea {
-    font-size: 0.75rem;
-  }
-  form div button {
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 280px) {
-  form legend {
-    font-size: 1rem;
-  }
-  form h2 {
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
-  form label, form input, form textarea,
-  form div button {
-    font-size: 0.5rem;
-    font-weight: 300;
-  }
-  form div button {
-    padding: 0.3125rem;
-    font-weight: 700;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

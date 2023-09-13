@@ -17,11 +17,13 @@ nav {
         }
         color: $color-blanco;
         &:hover {
-          font-size: 2rem;
-          transition: font-size 0.08s;
-          cursor: pointer;
           text-shadow: 0px 0px 20px $color-sombra-navbar;
+          cursor: pointer;
         }
+      }
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s;
       }
     }
   }
