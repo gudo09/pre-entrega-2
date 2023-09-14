@@ -15,18 +15,20 @@
         "./layout/main/main-css",
         "./layout/main/main-index",
         "./layout/main/main-contacto",
+        "./layout/sections/seccion-generica",
         "./layout/sections/seccion-discos",
         "./layout/sections/seccion-seguinos",
         "./layout/sections/seccion-lanzamientos",
         "./layout/sections/seccion-tienda",
+        "./layout/sections/seccion-shows",
         "./layout/footer"
         ;
 
 //COMPONENTS IMPORTS
 @import "./components/cards/card-discografia",
         "./components/cards/card-tienda",
+        "./components/cards/card-shows",
         "./components/botones/boton-enviar-formulario",
-        "./components/botones/boton-nav-dropdown",
         "./components/botones/boton-tienda-comprar",
         "./components/formulario-contacto",
         "./components/logos-seguinos"
@@ -42,6 +44,7 @@
         "./layout/media/media1340",
         "./layout/media/media1024",
         "./layout/media/media945",
+        "./layout/media/media800",
         "./layout/media/media768",
         "./layout/media/media530",
         "./layout/media/media468",

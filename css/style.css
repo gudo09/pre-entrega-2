@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  border: solid 1px red;
 }
 
 body {
@@ -188,6 +189,17 @@ nav > ul span li:hover {
   background-position: center;
 }
 
+.seccion-generica {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.9375rem;
+  padding: 2rem;
+}
+
+.seccion-generica h2 {
+  margin-bottom: 1rem;
+}
+
 /*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
 .seccion-discos {
   display: flex;
@@ -296,6 +308,7 @@ nav > ul span li:hover {
   font-size: 3rem;
 }
 .seccion-tienda .sub-seccion-remeras, .seccion-tienda .sub-seccion-discos {
+  width: 90%;
   margin: 2rem 0rem;
   padding-top: 3rem;
   padding-bottom: 4rem;
@@ -314,7 +327,8 @@ nav > ul span li:hover {
   justify-items: center;
   row-gap: 2rem;
   column-gap: 2rem;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .seccion-tienda > div > h3 {
   margin-bottom: 3rem;
@@ -322,6 +336,15 @@ nav > ul span li:hover {
   font-weight: 700;
   text-decoration: underline;
   text-align: center;
+}
+
+.lista-shows {
+  width: 90%;
+  margin: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
@@ -462,6 +485,77 @@ footer p {
   font-weight: 700;
 }
 
+.card-show {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 1.25rem;
+  background-color: #f2efef;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+  border: 0.25rem rgba(29, 31, 31, 0.8588235294) solid;
+  overflow: hidden;
+  gap: 1.75rem;
+}
+
+.card-show-reverse {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.fecha-show {
+  width: 300px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdfdfb;
+  border-radius: 20px;
+  border: 0.12rem rgba(29, 31, 31, 0.8588235294) solid;
+  margin: 2rem;
+}
+
+.dia-semana-show {
+  font-weight: 600;
+}
+
+.dia-show {
+  color: rgb(196, 31, 31);
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.mes-show {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.anio-show {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.div-precio-show {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.card-show-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 3rem 0rem;
+}
+.card-show-texto h4 {
+  font-size: 3rem;
+}
+
+.card-show-texto-reverse {
+  align-items: flex-end;
+}
+
 /*------------------------ESTILOS BOTONES-------------------------------------------------------------*/
 form div button {
   width: 9.375rem;
@@ -474,62 +568,6 @@ form div button {
   font-size: 1.25rem;
 }
 
-#check {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  .banner-generico {
-    justify-content: flex-start !important;
-    text-indent: 1rem;
-  }
-  nav, .nav-bar {
-    background-color: #1d1f1f;
-  }
-  nav i::before, .nav-bar i::before {
-    display: block;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0rem;
-    width: 70%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding-top: 15vh;
-    padding-bottom: 40vh;
-    right: -100%;
-    z-index: 100;
-    background-color: #77527b;
-    transition: all 0.2s ease-in-out;
-  }
-  .menu li {
-    margin-top: 3.2rem;
-    margin-left: 1rem;
-  }
-  .menu li a {
-    padding: 10px;
-    text-decoration: none;
-    color: #f4f4ee;
-  }
-  .close-menu, .open-menu {
-    position: absolute;
-    font-size: 3rem;
-    top: 2.6rem;
-    right: 25px;
-    color: #f4f4ee;
-  }
-  .open-menu {
-    cursor: pointer;
-  }
-  #check:checked ~ .menu {
-    right: 0;
-  }
-}
 .btn-comprar {
   border: none;
   background-color: #77527b;
@@ -673,6 +711,22 @@ form div button {
   .ul-discos {
     grid-template-columns: 1fr 1fr 1fr !important;
   }
+  .card-tienda {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+    width: 30rem !important;
+    height: 37rem !important;
+  }
+  .card-tienda-texto, .card-tienda .div-precio {
+    justify-content: center !important;
+  }
+  .card-tienda button {
+    align-self: center !important;
+  }
+  .card-tienda h4 {
+    text-align: center !important;
+  }
 }
 @media (max-width: 1440px) {
   /*----------------------------------form contacto----------------------------------------*/
@@ -699,6 +753,9 @@ form div button {
   }
 }
 @media (max-width: 1024px) {
+  .seccion-tienda > div > ul {
+    grid-template-columns: 1fr;
+  }
   /*----------------------------------form contacto----------------------------------------*/
   form div {
     margin-bottom: 1rem;
@@ -732,6 +789,62 @@ form div button {
   /*----------------------------------listado discos----------------------------------------*/
   .ul-discos {
     grid-template-columns: 1fr !important;
+  }
+}
+#check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .banner-generico {
+    justify-content: flex-start !important;
+    text-indent: 1rem;
+  }
+  nav, .nav-bar {
+    background-color: #1d1f1f;
+  }
+  nav i::before, .nav-bar i::before {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0rem;
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-top: 15vh;
+    padding-bottom: 40vh;
+    right: -100%;
+    z-index: 100;
+    background-color: #77527b;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 3.2rem;
+    margin-left: 1rem;
+  }
+  .menu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #f4f4ee;
+  }
+  .close-menu, .open-menu {
+    position: absolute;
+    font-size: 3rem;
+    top: 2.6rem;
+    right: 25px;
+    color: #f4f4ee;
+  }
+  .open-menu {
+    cursor: pointer;
+  }
+  #check:checked ~ .menu {
+    right: 0;
   }
 }
 @media (max-width: 768px) {
@@ -791,6 +904,13 @@ form div button {
   /*----------------------------------footer----------------------------------------*/
   footer p {
     font-size: 0.87rem;
+  }
+  .seccion-tienda > div > ul > .card-tienda {
+    width: 10rem;
+    margin: 0;
+  }
+  .seccion-tienda > div > ul > .card-tienda-texto {
+    margin-right: 0rem;
   }
 }
 @media (max-width: 530px) {

@@ -8,7 +8,7 @@
 
   @include mixin-flex(column, nowrap,center,flex-start,0rem);
   .sub-seccion-remeras {
-    //width: 90%;
+    width: 90%;
     margin: 2rem 0rem;
     padding: {
       top: 3rem;
@@ -31,7 +31,8 @@
   >div {
     >ul {
       @include mixin-grid(2,center,2rem,2rem);
-      width: 100%;
+      justify-content: center;
+      align-items: center;
     }
 
     >h3 {

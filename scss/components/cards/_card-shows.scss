@@ -1,0 +1,71 @@
+
+.card-show {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 1.25rem;
+  background-color: #f2efef;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+  border: 0.25rem #1d1f1fdb solid;
+  overflow: hidden;
+  gap: 1.75rem;
+}
+
+.card-show-reverse {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.fecha-show {
+  width: 300px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdfdfb;
+  border-radius: 20px;
+  border: 0.12rem #1d1f1fdb solid;
+  margin: 2rem;
+}
+
+.dia-semana-show {
+  font-weight: 600;
+}
+
+.dia-show {
+  color: rgb(196, 31, 31);
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.mes-show {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.anio-show {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.div-precio-show {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.card-show-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 3rem 0rem;
+  h4 {
+    font-size: 3rem;
+  }
+}
+
+.card-show-texto-reverse {
+  align-items: flex-end;
+}

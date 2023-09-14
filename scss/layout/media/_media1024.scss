@@ -1,4 +1,9 @@
 @media (max-width: 1024px) {
+  .seccion-tienda>div {
+    >ul {
+      grid-template-columns: 1fr;
+    }
+  }
   /*----------------------------------form contacto----------------------------------------*/
   form {
     div {
@@ -39,4 +44,6 @@
       font-size: 2rem !important;
     }
   }
+
+
 }

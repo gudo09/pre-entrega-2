@@ -3,5 +3,24 @@
   .ul-discos {
     grid-template-columns: 1fr 1fr 1fr !important;
   }
+  .card-tienda {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+    width: 30rem !important;
+    height: 37rem !important;
+    &-texto, .div-precio {
+      justify-content: center !important;
+    }
+    button {
+      align-self: center !important;
+    }
+    h4 {
+      text-align: center !important;
+    }
+  }
 }
+
+
+
   
