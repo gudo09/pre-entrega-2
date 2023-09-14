@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  border: solid 1px red;
+  //border: solid 1px red;
 }
 body {
   @include mixin-flex(column,nowrap,stretch,flex-start,0rem);
