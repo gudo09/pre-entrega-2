@@ -1,10 +1,27 @@
 /*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
 .seccion-discos {
-  >.container-discos {
+  @include mixin-flex(column,nowrap,center,center,0rem);
+  
+  >.ul-discos{
+    width: 93%;
     margin: 2rem 0rem;
-
-    .ul-discos {
-      @include mixin-grid(4, center, 3rem, 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-auto-rows: minmax(35rem, 40rem) ;
+    row-gap: 3rem;
+    
+    >h2 {
+      font: {
+        size: 3rem;
+        weight: 600;
+      }
+      grid-column: 1/-1;
+      justify-self: start;
+    }
+    li {
+      justify-self: center;
     }
   }
 }

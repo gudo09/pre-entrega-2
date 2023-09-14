@@ -34,6 +34,9 @@
   
   /*----------------------------------listado discos----------------------------------------*/
   .ul-discos {
-    grid-template-columns: 1fr;
+    width: 100% !important;
+    >h2 {
+      font-size: 2rem !important;
+    }
   }
 }

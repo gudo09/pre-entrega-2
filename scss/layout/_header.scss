@@ -8,17 +8,19 @@ header {
       size: cover;
       position: center;
     }
+
     .filtro {
       @include width-height(100%,100%);
       background-color: $color-filtro-hero-image;
     }
+
   }
   .banner-generico {
+    @include mixin-flex(row,nowrap,center,center,0rem);
     background-color: $color-negro;
     height: 9rem;
-    display: flex;
-    @include alignI-justifyC(center,center);
   }
+
   h1 {
     margin-bottom: 0;
     font: {

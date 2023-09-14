@@ -2,34 +2,40 @@
   /*----------------------------------form contacto----------------------------------------*/
   form {
     fieldset {
-      legend {
+      h2 {
+        margin-bottom: 2rem;
+        font: {
+          size: 0.5rem;
+          weight: 400;
+        }
+      }
+      >legend {
         font: {
           size: 3rem;
           weight: 600;
         }
-      }
 
-      h2 {
-        margin-bottom: 2rem;
-        font: {
-          size: 2rem;
-          weight: 500;
+
+
+      }
+      section {
+        >div {
+          >div {
+            label {
+              font: {
+                size: 1.25rem;
+                weight: 400;
+              }
+
+            }
+          }
         }
       }
 
-      label {
-        font: {
-          size: 1.25rem;
-          weight: 400;
-        }
-      }
-    }
-
-    div {
-      margin-bottom: 1rem;
       button {
         margin-bottom: 2.5rem;
       }
+
     }
   }
 }

@@ -10,6 +10,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -19,12 +20,17 @@
       </div>
 
       <nav>
-        <ul>
-          <li><a href="../index.html">INICIO</a></li>
-          <li><a href="../pages/tienda.html">TIENDA</a></li>
-          <li><a href="../pages/discografia.html">DISCOGRAFIA</a></li>
-          <li><a href="../pages/shows.html">SHOWS</a></li>
-          <li><a href="#">CONTACTO</a></li>
+        <ul class='nav-bar'>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+              <li><a href="../index.html">INICIO</a></li>
+              <li><a href="../pages/tienda.html">TIENDA</a></li>
+              <li><a href="../pages/discografia.html">DISCOGRAFIA</a></li>
+              <li><a href="../pages/shows.html">SHOWS</a></li>
+              <li><a href="#">CONTACTO</a></li>
+              <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </ul>
       </nav>
     </header>

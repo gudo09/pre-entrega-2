@@ -1,8 +1,7 @@
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
 .seccion-seguinos {
   width: 60%;
-  @include flex-direction(column);
-  align-items: center;
+  @include mixin-flex(column,nowrap,center,flex-start,0rem);
   h3 {
     color: $color-blanco;
     font-size: 2rem;

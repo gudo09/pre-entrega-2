@@ -10,6 +10,10 @@
 body {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0rem;
   min-height: 100vh;
   background-image: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
 }
@@ -68,11 +72,14 @@ header .hero-image .filtro {
   background-color: rgba(109, 71, 112, 0.2941176471);
 }
 header .banner-generico {
-  background-color: #1d1f1f;
-  height: 9rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  gap: 0rem;
+  background-color: #1d1f1f;
+  height: 9rem;
 }
 header h1 {
   margin-bottom: 0;
@@ -90,28 +97,72 @@ nav {
   display: flex;
   justify-content: center;
 }
-nav ul {
+nav > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+nav > ul i::before {
+  display: none;
+}
+nav > ul span {
   width: 80%;
   height: 5rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
+  gap: 0rem;
 }
-nav ul li a {
+nav > ul span li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+nav > ul span li a {
+  padding: 1rem;
   font-size: 1.5rem;
   font-style: italic;
   font-weight: 800;
   color: #f4f4ee;
 }
-nav ul li a:hover {
+nav > ul span li a:hover {
   text-shadow: 0px 0px 20px #38203b;
-  cursor: pointer;
 }
-nav ul li:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s;
+nav > ul span li:hover {
+  cursor: pointer;
+  -webkit-animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-0.3125rem);
+    transform: translateY(-0.3125rem);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-0.3125rem);
+    transform: translateY(-0.3125rem);
+  }
+}
 /*------------------------ESTILOS MAIN-------------------------------------------------------------*/
 .main-css {
   display: flex;
@@ -126,6 +177,11 @@ nav ul li:hover {
 /*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
 .main-contacto {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-image: url(../assets/img/fondo-contacto-2.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,15 +189,32 @@ nav ul li:hover {
 }
 
 /*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
-.seccion-discos > .container-discos {
-  margin: 2rem 0rem;
+.seccion-discos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
 }
-.seccion-discos > .container-discos .ul-discos {
+.seccion-discos > .ul-discos {
+  width: 93%;
+  margin: 2rem 0rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-auto-rows: minmax(35rem, 40rem);
   row-gap: 3rem;
-  column-gap: 2rem;
+}
+.seccion-discos > .ul-discos > h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  grid-column: 1/-1;
+  justify-self: start;
+}
+.seccion-discos > .ul-discos li {
+  justify-self: center;
 }
 
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
@@ -149,7 +222,10 @@ nav ul li:hover {
   width: 60%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: flex-start;
+  gap: 0rem;
 }
 .seccion-seguinos h3 {
   color: #f4f4ee;
@@ -258,6 +334,7 @@ footer {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  gap: 0rem;
 }
 footer p {
   margin: 0;
@@ -272,10 +349,9 @@ footer p {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1rem;
   width: 25rem;
-  height: 35rem;
   background-color: #f4f4ee;
   background-image: linear-gradient(45deg, #f4f4ee 26%, #695c6f 100%);
   border-style: solid;
@@ -306,6 +382,10 @@ footer p {
   background-color: #1d1f1f;
   color: #f4f4ee;
 }
+.ul-discos li a:hover {
+  -webkit-animation: scale-down-center 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
+  animation: scale-down-center 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
+}
 .ul-discos li .container-cortamambo {
   width: 20rem;
   height: 20rem;
@@ -315,6 +395,26 @@ footer p {
   filter: blur(15px);
 }
 
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
 /*------------------------cards tienda-------------------------------------------------------------*/
 .seccion-tienda > div > ul > .card-tienda {
   width: 45rem;
@@ -374,6 +474,62 @@ form div button {
   font-size: 1.25rem;
 }
 
+#check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .banner-generico {
+    justify-content: flex-start !important;
+    text-indent: 1rem;
+  }
+  nav, .nav-bar {
+    background-color: #1d1f1f;
+  }
+  nav i::before, .nav-bar i::before {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0rem;
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-top: 15vh;
+    padding-bottom: 40vh;
+    right: -100%;
+    z-index: 100;
+    background-color: #77527b;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 3.2rem;
+    margin-left: 1rem;
+  }
+  .menu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #f4f4ee;
+  }
+  .close-menu, .open-menu {
+    position: absolute;
+    font-size: 3rem;
+    top: 2.6rem;
+    right: 25px;
+    color: #f4f4ee;
+  }
+  .open-menu {
+    cursor: pointer;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
 .btn-comprar {
   border: none;
   background-color: #77527b;
@@ -388,47 +544,89 @@ form div button {
 .formulario-contacto {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0rem;
   align-items: center;
-  width: 60%;
+  width: 90%;
   padding: 2rem;
   background-color: rgba(185, 163, 185, 0.7960784314);
   box-shadow: black 0rem 0rem 2rem;
   backdrop-filter: blur(0.125rem);
 }
-.formulario-contacto fieldset {
+.formulario-contacto > fieldset {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0rem;
   align-items: center;
   gap: 1.5rem;
 }
-.formulario-contacto fieldset legend {
+.formulario-contacto > fieldset legend {
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
   margin-top: 1rem;
 }
-.formulario-contacto fieldset > h2 {
-  font-size: 1.5rem;
-}
-.formulario-contacto fieldset > section > div > div {
-  margin: 0.5rem 0;
-  display: flex;
-  align-items: center;
-}
-.formulario-contacto fieldset > section > div > div label {
-  font-size: 1.2rem;
+.formulario-contacto > fieldset > h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
   font-weight: 500;
 }
-.formulario-contacto fieldset > section > div > div input {
+.formulario-contacto > fieldset > .section-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+.formulario-contacto > fieldset > .section-form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.formulario-contacto > fieldset > .section-form > div label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.formulario-contacto > fieldset > .section-form > div input {
+  width: 100%;
   height: 3rem;
   text-indent: 0.5rem;
 }
-.formulario-contacto fieldset > section > div > div > div > textarea {
+.formulario-contacto > fieldset > .section-form > div textarea {
   margin-top: 0.5rem;
-  padding: 0;
-  text-indent: 0.7rem;
   padding-top: 0.7rem;
+  text-indent: 0.7rem;
   font-size: 1rem;
+  width: 100%;
+  height: 20rem;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-pais {
+  grid-column: 1/3;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-nombre {
+  grid-column: 3/5;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-apellido {
+  grid-column: 5/7;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-email {
+  grid-column: 1/4;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-telefono {
+  grid-column: 4/7;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-asunto {
+  grid-column: 1/4;
+}
+.formulario-contacto > fieldset > .section-form > .container-form-mensaje {
+  grid-column: 1/7;
 }
 
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
@@ -436,8 +634,11 @@ form div button {
   width: 100%;
   height: 7rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
+  gap: 0rem;
 }
 .logos-seguinos li a img {
   height: 4.25rem;
@@ -448,5 +649,261 @@ form div button {
 }
 
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
+@media (max-width: 2560px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form fieldset h2 {
+    margin-bottom: 2rem;
+    font-size: 0.5rem;
+    font-weight: 400;
+  }
+  form fieldset > legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form fieldset section > div > div label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  form fieldset button {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (max-width: 1750px) {
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+@media (max-width: 1440px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form > fieldset > h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form > fieldset > legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form > div {
+    margin-bottom: 1rem;
+  }
+  form label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media (max-width: 1340px) {
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 1024px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form div {
+    margin-bottom: 1rem;
+  }
+  form div button {
+    margin-bottom: 1.5rem;
+    padding: 0.3125rem;
+    font-weight: 700;
+  }
+  form legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form fieldset h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    width: 100% !important;
+  }
+  .ul-discos > h2 {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 945px) {
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 768px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 2rem;
+  }
+  /*----------------------------------navbar----------------------------------------*/
+  nav > ul {
+    width: 100%;
+  }
+  nav > ul > li a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  /*----------------------------------form contacto----------------------------------------*/
+  form legend {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  form fieldset h2 {
+    text-align: left;
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+  form label, form input, form textarea {
+    font-size: 0.8rem;
+  }
+  form div button {
+    font-size: 1rem;
+  }
+  .container-form-pais {
+    grid-column: 1/7 !important;
+  }
+  .container-form-nombre {
+    grid-column: 1/7 !important;
+  }
+  .container-form-apellido {
+    grid-column: 1/7 !important;
+  }
+  .container-form-email {
+    grid-column: 1/7 !important;
+  }
+  .container-form-telefono {
+    grid-column: 1/7 !important;
+  }
+  .container-form-asunto {
+    grid-column: 1/7 !important;
+  }
+  .container-form-mensaje {
+    grid-column: 1/7 !important;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos > h2 {
+    font-size: 1.75rem !important;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer p {
+    font-size: 0.87rem;
+  }
+}
+@media (max-width: 530px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 2rem;
+  }
+  /*----------------------------------navbar----------------------------------------*
+
+
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos h2 {
+    text-align: center !important;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 468px) {
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 1.5rem;
+  }
+  /*----------------------------------form contacto----------------------------------------*/
+  form div {
+    margin-bottom: 0.5rem;
+  }
+  form legend {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  form label, form input, form textarea {
+    font-size: small;
+  }
+  form div button {
+    font-size: small;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .seccion-discos {
+    padding: 0;
+  }
+  .seccion-discos .ul-discos {
+    grid-auto-rows: auto;
+  }
+  .seccion-discos .ul-discos h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .seccion-discos .ul-discos li {
+    justify-content: space-between;
+    width: 15rem;
+    height: 25rem;
+  }
+  .seccion-discos .ul-discos li img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .seccion-discos .ul-discos li p {
+    font-size: 1.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .seccion-discos .ul-discos li a {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer {
+    height: 30px;
+  }
+  footer p {
+    font-size: 0.57rem;
+  }
+}
+@media (max-width: 320px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form legend {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  form h2 {
+    font-size: 1.025rem;
+  }
+  form label, form input, form textarea {
+    font-size: 0.75rem;
+  }
+  form div button {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 280px) {
+  form legend {
+    font-size: 1rem;
+  }
+  form h2 {
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  form label, form input, form textarea,
+  form div button {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+  form div button {
+    padding: 0.3125rem;
+    font-weight: 700;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

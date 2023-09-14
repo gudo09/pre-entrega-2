@@ -7,7 +7,7 @@
   //border: solid 1px red;
 }
 body {
-  @include flex-direction(column);
+  @include mixin-flex(column,nowrap,stretch,flex-start,0rem);
   min-height: 100vh;
   background-image: $color-fondo-body;
 }

@@ -2,14 +2,22 @@
   /*----------------------------------header----------------------------------------*/
   .banner-generico {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
   /*----------------------------------navbar----------------------------------------*/
-  nav ul li a {
-    font-size: 1rem;
+  nav >ul {
+    width: 100%;
+    >li {
+      a {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
   }
+
+  
 
   /*----------------------------------form contacto----------------------------------------*/
   form {
@@ -24,14 +32,14 @@
       h2 {
         text-align: left;
         font: {
-          size: 1.3rem;
+          size: 0.5rem;
           weight: 500;
         }
       }
     }
 
     label, input, textarea {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
 
     div {
@@ -41,9 +49,36 @@
     }
   }
 
+  .container-form {
+    &-pais {
+      grid-column: 1/7 !important;
+    }
+    &-nombre {
+      grid-column: 1/7 !important;
+    }
+    &-apellido {
+      grid-column: 1/7 !important;
+    }
+    &-email {
+      grid-column: 1/7 !important;
+    }
+    &-telefono {
+      grid-column: 1/7 !important;
+    }
+    &-asunto {
+      grid-column: 1/7 !important;
+    }
+    &-mensaje {
+      
+      grid-column: 1/7 !important;
+    }
+  }
+
   /*----------------------------------listado discos----------------------------------------*/
-  .titulo-discos {
-    font-size: 2.25rem;
+  .ul-discos {
+    >h2 {
+      font-size: 1.75rem !important;
+    }
   }
 
   /*----------------------------------footer----------------------------------------*/

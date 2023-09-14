@@ -6,7 +6,7 @@
     }
   }
 
-  @include flex-full-gap(column, nowrap,center,flex-start,0rem);
+  @include mixin-flex(column, nowrap,center,flex-start,0rem);
   .sub-seccion-remeras {
     //width: 90%;
     margin: 2rem 0rem;
@@ -30,7 +30,6 @@
 
   >div {
     >ul {
-      //@include flex-full-gap(row, wrap, stretch, space-evenly, 2rem);
       @include mixin-grid(2,center,2rem,2rem);
       width: 100%;
     }

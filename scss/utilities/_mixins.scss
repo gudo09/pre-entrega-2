@@ -1,5 +1,5 @@
 // MIXINS FLEXBOX
-@mixin flex-full-gap($direction, $wrap, $align, $justify, $gap) {
+@mixin mixin-flex($direction, $wrap, $align, $justify, $gap) {
   display: flex;
   flex: {
     direction: $direction;
@@ -8,26 +8,6 @@
   align-items: $align;
   justify-content: $justify;
   gap: $gap;
-}
-
-@mixin flex($direction, $wrap, $align, $justify) {
-  display: flex;
-  flex: {
-    direction: $direction;
-    wrap: $wrap;
-  }
-  align-items: $align;
-  justify-content: $justify;
-}
-
-@mixin flex-direction($direction) {
-  display: flex;
-  flex-direction: $direction;
-}
-
-@mixin alignI-justifyC($align, $justify) {
-  align-items: $align;
-  justify-content: $justify;
 }
 
 @mixin width-height($width, $height) {

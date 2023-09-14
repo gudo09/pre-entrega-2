@@ -2,8 +2,9 @@
 
 /*------------------------CARDS DISCOS-------------------------------------------------------------*/
 .ul-discos li {
-  @include flex-full-gap(column,nowrap,center,center,1rem);
-  @include width-height(25rem,35rem);
+  @include mixin-flex(column,nowrap,center,space-evenly,1rem);
+  width: 25rem;
+
   background: {
     color: $color-blanco;
     image: $color-fondo-card-discografia;
@@ -43,6 +44,11 @@
     border-radius: 0.625rem;
     background-color: $color-negro;
     color: $color-blanco;
+
+    &:hover {
+      -webkit-animation: scale-down-center 0.2s cubic-bezier(0.895, 0.030, 0.685, 0.220) both;
+	        animation: scale-down-center 0.2s cubic-bezier(0.895, 0.030, 0.685, 0.220) both;
+    }
   }
 
   .container-cortamambo {
@@ -52,5 +58,26 @@
     img {
       filter: blur(15px);
     }
+  }
+}
+
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }

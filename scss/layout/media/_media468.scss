@@ -5,7 +5,8 @@
       font-size: 1.5rem;
     }
   }
-
+  
+  
   /*----------------------------------form contacto----------------------------------------*/
   form {
     div {
@@ -43,10 +44,15 @@
     padding: 0;
 
     .ul-discos {
-      gap: 1rem;
-  
+      grid-auto-rows: auto;
+      h2 {
+        font-size: 1.75rem;
+        text-align: center;
+      }
+      
       li {
-        width: 15rem;
+        justify-content: space-between;
+        @include width-height(15rem,25rem);
         img {
           @include width-height(15rem,15rem);
         }
@@ -60,16 +66,12 @@
         }
   
         a {
+          margin-bottom: 1rem;
           font-size: 1rem;
         }
       }
     }
 
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.75rem;
-      text-align: center;
-    }
   }
 
   /*----------------------------------footer----------------------------------------*/
