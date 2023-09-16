@@ -1,12 +1,19 @@
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
-footer {
-  height: 2.25rem;
-  margin-top: auto !important;
-  background-color: $color-negro;
-  @include mixin-flex(row,nowrap,center,center,0rem);
-  p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: $color-blanco;
+.footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  @include mixin-flex-col(nowrap,center,center,0rem);
+  
+  &__copyright {
+    @include mixin-flex-row(nowrap,center,center,0rem);
+    @include width-height(100%, 4rem);
+    background-color: $color-negro;
+    
+    .copyright__texto{
+      margin: 0;
+      font-size: 1.5rem;
+      color: $color-blanco;
+      text-align: center;
+    }
   }
 }

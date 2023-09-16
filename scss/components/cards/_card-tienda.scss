@@ -4,7 +4,7 @@
     >ul {
       >.card-tienda {
         width: 45rem;
-        @include mixin-flex(row, nowrap, center, flex-start, 3rem);
+        @include mixin-flex-row( nowrap, center, flex-start, 3rem);
         border: {
           style: solid;
           radius: 1.25rem;
@@ -23,14 +23,14 @@
         >.card-tienda-texto {
           width: 70%;
           margin-right: 2rem;
-          @include mixin-flex(column, nowrap, stretch, flex-start, 0.75rem);
+          @include mixin-flex-col( nowrap, stretch, flex-start, 0.75rem);
           
           >h4 {
             font-size: 1.75rem;
           }
   
           >.div-precio {
-          @include mixin-flex(row, nowrap, flex-start, flex-start, 0.75rem);
+          @include mixin-flex-row( nowrap, flex-start, flex-start, 0.75rem);
           >.valor-precio {
             font-weight: 700;
           }

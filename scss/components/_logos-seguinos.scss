@@ -1,7 +1,7 @@
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
 .logos-seguinos {
   @include width-height(100%,7rem);
-  @include mixin-flex(row,nowrap,center,space-evenly,0rem);
+  @include mixin-flex-row(nowrap,center,space-evenly,0rem);
   li { 
     a { 
       img {

@@ -1,10 +1,11 @@
 /*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
-.seccion-seguinos {
+.footer__seguinos {
   width: 60%;
-  @include mixin-flex(column,nowrap,center,flex-start,0rem);
+  margin-bottom: 3rem;
+  @include mixin-flex-col(nowrap,center,center,3rem);
   h3 {
+    margin: 0;
     color: $color-blanco;
     font-size: 2rem;
-    margin-bottom: 3rem;
   }
 }

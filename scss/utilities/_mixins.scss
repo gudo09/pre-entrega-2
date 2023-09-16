@@ -1,24 +1,43 @@
 // MIXINS FLEXBOX
-@mixin mixin-flex($direction, $wrap, $align, $justify, $gap) {
-  display: flex;
+@mixin mixin-flex-row($wrap, $alinear-vertical, $alinear-horizontal, $gap) {
+  display: flex; 
   flex: {
-    direction: $direction;
+    direction: row;
     wrap: $wrap;
   }
-  align-items: $align;
-  justify-content: $justify;
+  align-items: $alinear-vertical;
+  justify-content: $alinear-horizontal;
   gap: $gap;
 }
+
+@mixin mixin-flex-col($wrap, $alinear-vertical, $alinear-horizontal, $gap) {
+  display: flex;
+  flex: {
+    direction: column;
+    wrap: $wrap;
+  }
+  align-items: $alinear-horizontal;
+  justify-content: $alinear-vertical;
+  gap: $gap;
+}
+
+
 
 @mixin width-height($width, $height) {
   width: $width;
   height: $height;
 }
 
-@mixin mixin-grid ($columnas, $justify-items, $row-gap, $column-gap) {
+@mixin mixin-grid ($columnas, $vertical-item, $horizontal-item, $row-gap, $column-gap) {
   display: grid;
   grid-template-columns: repeat($columnas, 1fr);
-  justify-items: $justify-items;
+  justify-items: $horizontal-item;
+  align-items: $vertical-item;
   row-gap: $row-gap;
   column-gap: $column-gap;
+}
+
+@mixin mixin-grid-auto-row-col ($tamanio-fila, $tamanio-columna) {
+  grid-auto-rows: $tamanio-fila;
+  grid-auto-columns: $tamanio-columna;
 }

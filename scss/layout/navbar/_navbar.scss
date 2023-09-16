@@ -1,20 +1,23 @@
 /*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
 nav {
+  #check {
+    display: none;
+  }
   background-color: $color-navbar;
   box-shadow: 0rem 0.125rem 1rem black;
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   >ul {
     width: 100%;
-    @include mixin-flex(row,nowrap,center,center,0rem);
+    @include mixin-flex-row(nowrap,center,center,0rem);
     i::before {
       display: none;
     }
     span {
       @include width-height(80%,5rem);
-      @include mixin-flex(row,nowrap,center,space-evenly,0rem);
+      @include mixin-flex-row(nowrap,center,space-evenly,0rem);
       li { 
-        @include mixin-flex(row,nowrap,center,center,0rem);
+        @include mixin-flex-row(nowrap,center,center,0rem);
         
         a {
           padding: 1rem;

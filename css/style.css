@@ -8,13 +8,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: 0rem;
-  min-height: 100vh;
   background-image: linear-gradient(to bottom, #bea5c0, #a38aa5, #89708b, #6f5672, #573e5a, #4d3650, #432e46, #3a273d, #3c2c3e, #3d313f, #3f3540, #403a41);
 }
 
@@ -43,7 +36,20 @@ textarea {
   resize: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0rem;
+}
+
 /*------------------------RESETEOS BOOTSTRAP-----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0rem;
+}
+
 h1, ul, p, footer {
   line-height: 1;
 }
@@ -58,7 +64,28 @@ ul {
 }
 
 /*------------------------ESTILOS HEADER-------------------------------------------------------------*/
-header .hero-image {
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0rem;
+  background-color: #1d1f1f;
+  height: 9rem;
+}
+.header__titulo {
+  margin-bottom: 0;
+  padding-left: 5rem;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.125rem black;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/*------------------------ESTILOS header main-------------------------------------------------------------*/
+.header--main {
   width: 100%;
   height: 40rem;
   background-image: url(../../assets/img/hero-image-2.jpg);
@@ -66,28 +93,13 @@ header .hero-image {
   background-size: cover;
   background-position: center;
 }
-header .hero-image .filtro {
+.header--main .header__filtro {
   width: 100%;
   height: 100%;
   background-color: rgba(109, 71, 112, 0.2941176471);
 }
-header .banner-generico {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-  background-color: #1d1f1f;
-  height: 9rem;
-}
-header h1 {
-  margin-bottom: 0;
-  font-style: italic;
-  font-size: 3rem;
-  font-weight: 900;
-  color: white;
-  text-shadow: 0.125rem 0.125rem 0.125rem black;
+.header--main .header__titulo {
+  padding-top: 1rem;
 }
 
 /*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
@@ -95,7 +107,9 @@ nav {
   background-color: #77527b;
   box-shadow: 0rem 0.125rem 1rem black;
   display: flex;
-  justify-content: center;
+}
+nav #check {
+  display: none;
 }
 nav > ul {
   width: 100%;
@@ -164,14 +178,19 @@ nav > ul span li:hover {
   }
 }
 /*------------------------ESTILOS MAIN-------------------------------------------------------------*/
-.main-css {
+.main-index {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: space-evenly;
+  justify-content: center;
   gap: 4rem;
-  margin: 4rem 0rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.body-index {
+  background-position-y: 40rem;
 }
 
 /*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
@@ -188,67 +207,66 @@ nav > ul span li:hover {
   background-position: center;
 }
 
-.seccion-generica {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 92%;
-  border-radius: 0.9375rem;
-  padding: 2rem;
-}
-.seccion-generica h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 2rem 2rem;
-}
-
-.seccion-generica h2 {
-  margin-bottom: 1rem;
-}
-
-/*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
-.seccion-discos {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-}
-.seccion-discos > .ul-discos {
-  width: 93%;
-  margin: 2rem 0rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  justify-content: center;
-  grid-auto-rows: minmax(35rem, 40rem);
-  row-gap: 3rem;
-}
-.seccion-discos > .ul-discos > h2 {
-  font-size: 3rem;
-  font-weight: 600;
-  grid-column: 1/-1;
-  justify-self: start;
-}
-.seccion-discos > .ul-discos li {
-  justify-self: center;
-}
-
-/*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
-.seccion-seguinos {
-  width: 60%;
+.seccion-transparente, .seccion-shows__lista, .seccion-shows, .seccion-discos__lista, .seccion-discos {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
   gap: 0rem;
+  width: 95%;
+  margin: 2rem 0rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0 8px 32px 0 rgba(29, 31, 31, 0.37);
+  border-radius: 0.625rem;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-color: rgba(255, 255, 255, 0.18);
 }
-.seccion-seguinos h3 {
+.seccion-transparente__titulo, .seccion-shows__titulo, .seccion-discos__titulo {
+  align-self: flex-start;
+  margin-top: 2rem;
+  padding: 0rem 5rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.seccion-transparente--sin-fondo, .seccion-shows__lista, .seccion-discos__lista {
+  border: none;
+  box-shadow: none;
+  background: none;
+  backdrop-filter: none;
+}
+
+/*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
+.seccion-discos__lista {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: space-between;
+  align-items: stretch;
+  row-gap: 3rem;
+  column-gap: 2rem;
+  grid-auto-rows: 35rem;
+  grid-auto-columns: auto;
+}
+
+/*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
+.footer__seguinos {
+  width: 60%;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.footer__seguinos h3 {
+  margin: 0;
   color: #f4f4ee;
   font-size: 2rem;
-  margin-bottom: 3rem;
 }
 
 /*------------------------ESTILOS SECCION LANZAMIENTOS-------------------------------------------------------------*/
@@ -306,8 +324,8 @@ nav > ul span li:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   gap: 0rem;
 }
 .seccion-tienda h2 {
@@ -331,10 +349,10 @@ nav > ul span li:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  align-items: center;
   row-gap: 2rem;
   column-gap: 2rem;
   justify-content: center;
-  align-items: center;
 }
 .seccion-tienda > div > h3 {
   margin-bottom: 3rem;
@@ -344,65 +362,79 @@ nav > ul span li:hover {
   text-align: center;
 }
 
-.lista-shows {
-  margin: 3rem 0rem;
+.seccion-shows__lista {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 3rem;
 }
 
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
-footer {
-  height: 2.25rem;
-  margin-top: auto !important;
-  background-color: #1d1f1f;
+.footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+.footer__copyright {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   gap: 0rem;
+  width: 100%;
+  height: 4rem;
+  background-color: #1d1f1f;
 }
-footer p {
+.footer__copyright .copyright__texto {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #f4f4ee;
+  text-align: center;
 }
 
 /*------------------------ESTILOS CARDS-------------------------------------------------------------*/
 /*------------------------CARDS DISCOS-------------------------------------------------------------*/
-.ul-discos li {
+.lista-discografia li {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 25rem;
+  min-width: 20rem;
+  max-width: 27rem;
   background-color: #f4f4ee;
   background-image: linear-gradient(45deg, #f4f4ee 26%, #695c6f 100%);
-  border-style: solid;
   border-radius: 1.25rem;
+  border-style: solid;
   border-color: #2d2d2d;
-  border-width: 0.25rem;
+  border-width: 0.1875rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
   overflow: hidden;
 }
-.ul-discos li:hover {
+.lista-discografia li:hover {
   transform: scale(1.05);
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
-.ul-discos li p {
+.lista-discografia li p {
+  max-width: 20rem;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
 }
-.ul-discos li img {
+.lista-discografia li img {
   width: 20rem;
   height: 20rem;
 }
-.ul-discos li a {
+.lista-discografia li a {
   padding: 1rem 1rem;
   font-size: 1.25rem;
   font-weight: 700;
@@ -410,16 +442,16 @@ footer p {
   background-color: #1d1f1f;
   color: #f4f4ee;
 }
-.ul-discos li a:hover {
+.lista-discografia li a:hover {
   -webkit-animation: scale-down-center 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
   animation: scale-down-center 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) both;
 }
-.ul-discos li .container-cortamambo {
+.lista-discografia li .container-cortamambo {
   width: 20rem;
   height: 20rem;
   overflow: hidden;
 }
-.ul-discos li .container-cortamambo img {
+.lista-discografia li .container-cortamambo img {
   filter: blur(15px);
 }
 
@@ -429,8 +461,8 @@ footer p {
     transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 @keyframes scale-down-center {
@@ -439,8 +471,8 @@ footer p {
     transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 /*------------------------cards tienda-------------------------------------------------------------*/
@@ -471,8 +503,8 @@ footer p {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: stretch;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: stretch;
   gap: 0.75rem;
 }
 .seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > h4 {
@@ -493,22 +525,21 @@ footer p {
 .card-show {
   width: 80%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  border-radius: 1.25rem;
-  background-color: #f2efef;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
-  border: 0.25rem rgba(29, 31, 31, 0.8588235294) solid;
-  overflow: hidden;
+  justify-content: flex-start;
   gap: 1.75rem;
+  background-color: #f2efef;
+  border-radius: 1.25rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.532);
+  overflow: hidden;
 }
-
-.card-show-reverse {
+.card-show--reverse {
   align-self: flex-end;
   flex-direction: row-reverse;
 }
-
-.fecha-show {
+.card-show__fecha {
   width: 300px;
   height: 280px;
   display: flex;
@@ -520,44 +551,40 @@ footer p {
   border: 0.12rem rgba(29, 31, 31, 0.8588235294) solid;
   margin: 2rem;
 }
-
-.dia-semana-show {
+.card-show__fecha .fecha-show__dia-semana {
   font-weight: 600;
 }
-
-.dia-show {
+.card-show__fecha .fecha-show__dia {
   color: rgb(196, 31, 31);
   font-size: 4rem;
   font-weight: 800;
 }
-
-.mes-show {
+.card-show__fecha .fecha-show__mes {
   font-size: 2rem;
   font-weight: 800;
 }
-
-.anio-show {
+.card-show__fecha .fecha-show__anio {
   font-size: 1.5rem;
   font-weight: 800;
 }
-
-.div-precio-show {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.card-show-texto {
+.card-show__texto {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin: 3rem 0rem;
 }
-.card-show-texto h4 {
+.card-show__texto .texto-show__lugar {
   font-size: 3rem;
 }
-
-.card-show-texto-reverse {
+.card-show__texto .texto-show__precio {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.card-show__texto .texto-show__precio p:nth-child(2) {
+  font-weight: 600;
+}
+.card-show__texto--reverse {
   align-items: flex-end;
 }
 
@@ -573,7 +600,7 @@ form div button {
   font-size: 1.25rem;
 }
 
-.btn-comprar {
+.btn-comprar, .btn-comprar-entradas {
   border: none;
   background-color: #77527b;
   color: #f4f4ee;
@@ -582,14 +609,25 @@ form div button {
   padding: 0.75rem 0rem;
   width: 9.375rem;
 }
+.btn-comprar:hover, .btn-comprar-entradas:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.btn-comprar-entradas {
+  border-radius: 1rem;
+  width: 12rem;
+  padding: 1rem 2rem;
+}
 
 /*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
 .formulario-contacto {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: stretch;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: stretch;
   gap: 0rem;
   align-items: center;
   width: 90%;
@@ -602,8 +640,8 @@ form div button {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: stretch;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: stretch;
   gap: 0rem;
   align-items: center;
   gap: 1.5rem;
@@ -692,343 +730,5 @@ form div button {
 }
 
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
-@media (max-width: 2560px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form fieldset h2 {
-    margin-bottom: 2rem;
-    font-size: 0.5rem;
-    font-weight: 400;
-  }
-  form fieldset > legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form fieldset section > div > div label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  form fieldset button {
-    margin-bottom: 2.5rem;
-  }
-}
-@media (max-width: 1750px) {
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    grid-template-columns: 1fr 1fr 1fr !important;
-  }
-  .card-tienda {
-    flex-direction: column !important;
-    flex-wrap: wrap !important;
-    justify-content: space-evenly !important;
-    width: 30rem !important;
-    height: 37rem !important;
-  }
-  .card-tienda-texto, .card-tienda .div-precio {
-    justify-content: center !important;
-  }
-  .card-tienda button {
-    align-self: center !important;
-  }
-  .card-tienda h4 {
-    text-align: center !important;
-  }
-}
-@media (max-width: 1440px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form > fieldset > h2 {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  form > fieldset > legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form > div {
-    margin-bottom: 1rem;
-  }
-  form label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-}
-@media (max-width: 1340px) {
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-@media (max-width: 1024px) {
-  .seccion-tienda > div > ul {
-    grid-template-columns: 1fr;
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form div {
-    margin-bottom: 1rem;
-  }
-  form div button {
-    margin-bottom: 1.5rem;
-    padding: 0.3125rem;
-    font-weight: 700;
-  }
-  form legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form fieldset h2 {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  form label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    width: 100% !important;
-  }
-  .ul-discos > h2 {
-    font-size: 2rem !important;
-  }
-}
-@media (max-width: 945px) {
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    grid-template-columns: 1fr !important;
-  }
-}
-#check {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  .banner-generico {
-    justify-content: flex-start !important;
-    text-indent: 1rem;
-  }
-  nav, .nav-bar {
-    background-color: #1d1f1f;
-  }
-  nav i::before, .nav-bar i::before {
-    display: block;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0rem;
-    width: 70%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding-top: 15vh;
-    padding-bottom: 40vh;
-    right: -100%;
-    z-index: 100;
-    background-color: #77527b;
-    transition: all 0.2s ease-in-out;
-  }
-  .menu li {
-    margin-top: 3.2rem;
-    margin-left: 1rem;
-  }
-  .menu li a {
-    padding: 10px;
-    text-decoration: none;
-    color: #f4f4ee;
-  }
-  .close-menu, .open-menu {
-    position: absolute;
-    font-size: 3rem;
-    top: 2.6rem;
-    right: 25px;
-    color: #f4f4ee;
-  }
-  .open-menu {
-    cursor: pointer;
-  }
-  #check:checked ~ .menu {
-    right: 0;
-  }
-}
-@media (max-width: 768px) {
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 2rem;
-  }
-  /*----------------------------------navbar----------------------------------------*/
-  nav > ul {
-    width: 100%;
-  }
-  nav > ul > li a {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form legend {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  form fieldset h2 {
-    text-align: left;
-    font-size: 0.5rem;
-    font-weight: 500;
-  }
-  form label, form input, form textarea {
-    font-size: 0.8rem;
-  }
-  form div button {
-    font-size: 1rem;
-  }
-  .container-form-pais {
-    grid-column: 1/7 !important;
-  }
-  .container-form-nombre {
-    grid-column: 1/7 !important;
-  }
-  .container-form-apellido {
-    grid-column: 1/7 !important;
-  }
-  .container-form-email {
-    grid-column: 1/7 !important;
-  }
-  .container-form-telefono {
-    grid-column: 1/7 !important;
-  }
-  .container-form-asunto {
-    grid-column: 1/7 !important;
-  }
-  .container-form-mensaje {
-    grid-column: 1/7 !important;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos > h2 {
-    font-size: 1.75rem !important;
-  }
-  /*----------------------------------footer----------------------------------------*/
-  footer p {
-    font-size: 0.87rem;
-  }
-  .seccion-tienda > div > ul > .card-tienda {
-    width: 10rem;
-    margin: 0;
-  }
-  .seccion-tienda > div > ul > .card-tienda-texto {
-    margin-right: 0rem;
-  }
-}
-@media (max-width: 530px) {
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 2rem;
-  }
-  /*----------------------------------navbar----------------------------------------*
-
-
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos h2 {
-    text-align: center !important;
-  }
-  /*----------------------------------footer----------------------------------------*/
-  footer p {
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 468px) {
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 1.5rem;
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form div {
-    margin-bottom: 0.5rem;
-  }
-  form legend {
-    font-size: 1.75rem;
-    font-weight: 700;
-  }
-  form h2 {
-    margin-bottom: 1rem;
-    font-size: 1.15rem;
-    font-weight: 500;
-  }
-  form label, form input, form textarea {
-    font-size: small;
-  }
-  form div button {
-    font-size: small;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .seccion-discos {
-    padding: 0;
-  }
-  .seccion-discos .ul-discos {
-    grid-auto-rows: auto;
-  }
-  .seccion-discos .ul-discos h2 {
-    font-size: 1.75rem;
-    text-align: center;
-  }
-  .seccion-discos .ul-discos li {
-    justify-content: space-between;
-    width: 15rem;
-    height: 25rem;
-  }
-  .seccion-discos .ul-discos li img {
-    width: 15rem;
-    height: 15rem;
-  }
-  .seccion-discos .ul-discos li p {
-    font-size: 1.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  .seccion-discos .ul-discos li a {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-  /*----------------------------------footer----------------------------------------*/
-  footer {
-    height: 30px;
-  }
-  footer p {
-    font-size: 0.57rem;
-  }
-}
-@media (max-width: 320px) {
-  /*----------------------------------form contacto----------------------------------------*/
-  form legend {
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-  form h2 {
-    font-size: 1.025rem;
-  }
-  form label, form input, form textarea {
-    font-size: 0.75rem;
-  }
-  form div button {
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 280px) {
-  form legend {
-    font-size: 1rem;
-  }
-  form h2 {
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
-  form label, form input, form textarea,
-  form div button {
-    font-size: 0.5rem;
-    font-weight: 300;
-  }
-  form div button {
-    padding: 0.3125rem;
-    font-weight: 700;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

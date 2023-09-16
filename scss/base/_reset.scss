@@ -7,8 +7,9 @@
   //border: solid 1px red;
 }
 body {
-  @include mixin-flex(column,nowrap,stretch,flex-start,0rem);
-  min-height: 100vh;
+  //@include mixin-flex-col(wrap,center,center,0rem);
+  //min-height: 100vh;
+  //max-width: 100vw;
   background-image: $color-fondo-body;
 }
 h2,p,legend,label {color: $color-negro;}
@@ -20,7 +21,15 @@ textarea {
   outline: none;
   resize: none;
 }
+main {
+  @include mixin-flex-col(nowrap, flex-start, center, 0rem);
+}
+
 /*------------------------RESETEOS BOOTSTRAP-----------------------------------------------------*/
+h1,h2,h3,h4,h5,h6{
+  margin-bottom: 0rem;
+}
+
 h1,ul,p,footer{
   line-height: 1;
 }
@@ -28,7 +37,6 @@ p {
   text-size-adjust: none;
 }
 ul {
-  
   padding-left: 0;
   margin-bottom: 0;
 }

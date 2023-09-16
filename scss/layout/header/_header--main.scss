@@ -1,0 +1,20 @@
+/*------------------------ESTILOS header main-------------------------------------------------------------*/
+.header--main {
+  @include width-height(100%,40rem);
+  background: {
+    image: url(../../assets/img/hero-image-2.jpg);
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+  .header {
+    &__filtro {
+      @include width-height(100%,100%);
+      background-color: $color-filtro-hero-image;
+    }
+    &__titulo {
+      padding-top: 1rem;
+    }
+  
+  }
+}

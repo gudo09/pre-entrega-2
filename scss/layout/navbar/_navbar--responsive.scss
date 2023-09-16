@@ -1,0 +1,59 @@
+//.banner-generico {
+//  justify-content: flex-start;
+//  text-indent: 1rem;
+//}
+
+nav, .nav-bar {
+  background-color: $color-negro;
+  i::before {
+    display: block;
+  }
+}
+
+.menu {
+    @include mixin-flex-row( nowrap, flex-start, center, 0rem);
+    @include width-height(70%, 100vh);
+    position: fixed;
+    top: 0;
+    padding: {
+      top: 15vh;
+      bottom: 40vh;
+    }
+    right: -100%;
+    z-index: 100;
+    background-color: $color-navbar;
+    transition: all 0.2s ease-in-out;
+    
+    li {
+      margin: {
+        top: 3.2rem;
+        left: 1rem;
+      }
+  
+      a {
+        padding: 10px;
+        text-decoration: none;
+        color: $color-blanco;
+      }
+    }
+
+}
+.close-menu {
+  position: absolute;
+  font-size: 3rem;
+  top: 2.6rem;
+  right: 25px;
+  color: $color-blanco;
+  
+}
+
+.open-menu {
+  @extend .close-menu;
+  cursor: pointer;
+
+}
+
+
+#check:checked ~ .menu {
+  right: 0;
+}

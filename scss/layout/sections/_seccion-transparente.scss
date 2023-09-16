@@ -1,0 +1,35 @@
+.seccion-transparente {
+  @include mixin-flex-col(nowrap, flex-start,center,0rem);
+  width: 95%;
+  margin: 2rem 0rem;
+
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  box-shadow: 0 8px 32px 0 rgba( $color-negro, 0.37 );
+  border: {
+    radius: .625rem;
+    style: solid;
+    width: .0625rem;
+    color: rgba( 255, 255, 255, 0.18);
+  }
+
+
+  &__titulo{
+    align-self: flex-start;
+    margin-top: 2rem;
+    padding: 0rem 5rem;
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
+  }
+
+
+  &--sin-fondo{ 
+    border: none;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+  }
+}

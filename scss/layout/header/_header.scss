@@ -1,0 +1,18 @@
+/*------------------------ESTILOS HEADER-------------------------------------------------------------*/
+.header {
+  @include mixin-flex-row(nowrap,center,flex-start,0rem);
+  background-color: $color-negro;
+  height: 9rem;
+  
+  &__titulo {
+    margin-bottom: 0;
+    padding-left: 5rem;;
+    color: white;
+    text-shadow: 0.125rem 0.125rem 0.125rem black;
+    font: {
+      style: italic;
+      size: 3rem;
+      weight: 900;
+    }
+  }
+}

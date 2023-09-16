@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio • El cuarteto de nos</title>
+    <title>Shows • El cuarteto de nos</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,8 +15,8 @@
   </head>
   <body>
     <header>
-      <div class="banner-generico">
-        <h1>EL CUARTETO DE NOS</h1>
+      <div class="header">
+        <h1 class="header__titulo">EL CUARTETO DE NOS</h1>
       </div>
 
       <nav>
@@ -36,117 +36,158 @@
     </header>
 
     <main>
-      <section class="seccion-generica">
-        <h2>Nuestras próximas presentaciones</h2>
-        <ul class="lista-shows">
+      <section class="seccion-shows">
+        <h2 class="seccion-shows__titulo">Nuestras próximas presentaciones</h2>
+        <ul class="seccion-shows__lista">
+          
           <li class="card-show">
-            <div class="fecha-show">
-              <p class="dia-semana-show">Viernes</p>
-              <p class="dia-show">25</p>
-              <p class="mes-show">Agosto</p>
-              <p class="anio-show">2023</p>
+            <div class="card-show__fecha fecha-show">
+              <p class="fecha-show__dia-semana">Viernes</p>
+              <p class="fecha-show__dia">25</p>
+              <p class="fecha-show__mes">Agosto</p>
+              <p class="fecha-show__anio">2023</p>
             </div>
-            <div class="card-show-texto">
-              <h4>Córdoba, Argentina</h4>
-              <div class="div-precio-show">
-                <p class="texto-precio-show">Precio:</p>
-                <p class="valor-precio-show">$7500</p>
+            <div class="card-show__texto texto-show">
+              <h4 class="texto-show__lugar">Córdoba, Argentina</h4>
+              <div class="texto-show__precio">
+                <p class="">Precio:</p>
+                <p class="">$7500</p>
               </div>
-              <button type="button" class="btn-comprar">Comprar</button>
+              <button type="button" class="btn-comprar-entradas">Comprar entradas</button>
             </div>
           </li>
 
-          <li class="card-show card-show-reverse">
-            <div class="fecha-show">
-              <p class="dia-semana-show">Miércoles</p>
-              <p class="dia-show">27</p>
-              <p class="mes-show">Septiembre</p>
-              <p class="anio-show">2023</p>
+          <li class="card-show card-show--reverse">
+            <div class="card-show__fecha fecha-show">
+              <p class="fecha-show__dia-semana">Miércoles</p>
+              <p class="fecha-show__dia">27</p>
+              <p class="fecha-show__mes">Septiembre</p>
+              <p class="fecha-show__anio">2023</p>
             </div>
-            <div class="card-show-texto card-show-texto-reverse">
-              <h4>Lima, Perú</h4>
-              <div class="div-precio-show">
-                <p class="texto-precio-show">Precio:</p>
-                <p class="valor-precio-show">$7500</p>
+            <div class="card-show__texto texto-show card-show__texto--reverse">
+              <h4 class="texto-show__lugar">Lima, Perú</h4>
+              <div class="texto-show__precio">
+                <p class="">Precio:</p>
+                <p class="">$7500</p>
               </div>
-              <button type="button" class="btn-comprar">Comprar</button>
-            </div>
-          </li>
-
-          <li class="card-show">
-            <div class="fecha-show">
-              <p class="dia-semana-show">Sábado</p>
-              <p class="dia-show">21</p>
-              <p class="mes-show">Octubre</p>
-              <p class="anio-show">2023</p>
-            </div>
-            <div class="card-show-texto">
-              <h4>Montevideo, Uruguay</h4>
-              <div class="div-precio-show">
-                <p class="texto-precio-show">Precio:</p>
-                <p class="valor-precio-show">$7500</p>
-              </div>
-              <button type="button" class="btn-comprar">Comprar</button>
-            </div>
-          </li>
-
-          <li class="card-show card-show-reverse">
-            <div class="fecha-show">
-              <p class="dia-semana-show">Viernes</p>
-              <p class="dia-show">10</p>
-              <p class="mes-show">Noviembre</p>
-              <p class="anio-show">2023</p>
-            </div>
-            <div class="card-show-texto card-show-texto-reverse">
-              <h4>Guadalajara, México</h4>
-              <div class="div-precio-show">
-                <p class="texto-precio-show">Precio:</p>
-                <p class="valor-precio-show">$7500</p>
-              </div>
-              <button type="button" class="btn-comprar">Comprar</button>
+              <button type="button" class="btn-comprar-entradas">Comprar entradas</button>
             </div>
           </li>
 
           <li class="card-show">
-            <div class="fecha-show">
-              <p class="dia-semana-show">Domingo</p>
-              <p class="dia-show">12</p>
-              <p class="mes-show">Noviembre</p>
-              <p class="anio-show">2023</p>
+            <div class="card-show__fecha fecha-show">
+              <p class="fecha-show__dia-semana">Sábado</p>
+              <p class="fecha-show__dia">21</p>
+              <p class="fecha-show__mes">Octubre</p>
+              <p class="fecha-show__anio">2023</p>
             </div>
-            <div class="card-show-texto">
-              <h4>México, México</h4>
-              <div class="div-precio-show">
-                <p class="texto-precio-show">Precio:</p>
-                <p class="valor-precio-show">$7500</p>
+            <div class="card-show__texto texto-show">
+              <h4 class="texto-show__lugar">Montevideo, Uruguay</h4>
+              <div class="texto-show__precio">
+                <p class="">Precio:</p>
+                <p class="">$7500</p>
               </div>
-              <button type="button" class="btn-comprar">Comprar</button>
+              <button type="button" class="btn-comprar-entradas">Comprar entradas</button>
             </div>
           </li>
 
-          <li class="card-show card-show-reverse">
-            <div class="fecha-show">
-              <p class="dia-semana-show">Sábado</p>
-              <p class="dia-show">25</p>
-              <p class="mes-show">Noviembre</p>
-              <p class="anio-show">2023</p>
+          <li class="card-show card-show--reverse">
+            <div class="card-show__fecha fecha-show">
+              <p class="fecha-show__dia-semana">Viernes</p>
+              <p class="fecha-show__dia">10</p>
+              <p class="fecha-show__mes">Noviembre</p>
+              <p class="fecha-show__anio">2023</p>
             </div>
-            <div class="card-show-texto card-show-texto-reverse">
-              <h4>Santiago, Chile</h4>
-              <div class="div-precio-show">
-                <p class="texto-precio-show">Precio:</p>
-                <p class="valor-precio-show">$7500</p>
+            <div class="card-show__texto texto-show card-show__texto--reverse">
+              <h4 class="texto-show__lugar">Guadalajara, México</h4>
+              <div class="texto-show__precio">
+                <p class="">Precio:</p>
+                <p class="">$7500</p>
               </div>
-              <button type="button" class="btn-comprar">Comprar</button>
+              <button type="button" class="btn-comprar-entradas">Comprar entradas</button>
+            </div>
+          </li>
+
+          <li class="card-show">
+            <div class="card-show__fecha fecha-show">
+              <p class="fecha-show__dia-semana">Domingo</p>
+              <p class="fecha-show__dia">12</p>
+              <p class="fecha-show__mes">Noviembre</p>
+              <p class="fecha-show__anio">2023</p>
+            </div>
+            <div class="card-show__texto texto-show">
+              <h4 class="texto-show__lugar">México, México</h4>
+              <div class="texto-show__precio">
+                <p class="">Precio:</p>
+                <p class="">$7500</p>
+              </div>
+              <button type="button" class="btn-comprar-entradas">Comprar entradas</button>
+            </div>
+          </li>
+
+          <li class="card-show card-show--reverse">
+            <div class="card-show__fecha fecha-show">
+              <p class="fecha-show__dia-semana">Sábado</p>
+              <p class="fecha-show__dia">25</p>
+              <p class="fecha-show__mes">Noviembre</p>
+              <p class="fecha-show__anio">2023</p>
+            </div>
+            <div class="card-show__texto texto-show card-show__texto--reverse">
+              <h4 class="texto-show__lugar">Santiago, Chile</h4>
+              <div class="texto-show__precio">
+                <p class="">Precio:</p>
+                <p class="">$7500</p>
+              </div>
+              <button type="button" class="btn-comprar-entradas">Comprar entradas</button>
             </div>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <p>Copyright 2023 - El cuarteto de nos - Todos los derechos reservados</p>
+    <footer class="footer">
+      <section class="footer__seguinos">
+        <h3>Seguinos en nuestras redes</h3>
+        <ul class="logos-seguinos">
+          <li>
+            <a
+              href="https://open.spotify.com/artist/13JJKrUewC1CJYmIDXQNoH?si=tO7H5LH3Ti6OZT5tAxYnOg"
+              target="_blank"
+              ><img src="../assets/img/logos/spotify.svg" alt=""
+            /></a>
+          </li>
+          <li class="logo-youtube">
+            <a
+              href="https://www.youtube.com/channel/UCHIalb8oZehqMPum16ImmGQ"
+              target="_blank"
+              ><img
+              src="../assets/img/logos/youtube.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/cuartetodenosok/" target="_blank"
+              ><img src="../assets/img/logos/instagram.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100044328944720"
+              target="_blank"
+              ><img src="../assets/img/logos/facebook.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/cuartetodenos" target="_blank"
+              ><img src="../assets/img/logos/twitter-x.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <div class="footer__copyright copyright">
+        <p class="copyright__texto">Copyright 2023 - El cuarteto de nos - Todos los derechos reservados</p>
+      </div>
     </footer>
+    
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

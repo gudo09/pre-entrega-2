@@ -1,6 +1,6 @@
 /*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
 .formulario-contacto {
-  @include mixin-flex(column,nowrap,stretch,flex-start,0rem);
+  @include mixin-flex-col(nowrap,stretch,flex-start,0rem);
   align-items: center;
   width: 90%;
   padding: 2rem;
@@ -9,7 +9,7 @@
   backdrop-filter: blur( 0.125rem );
 
   >fieldset {
-    @include mixin-flex(column,nowrap,stretch,flex-start,0rem);
+    @include mixin-flex-col(nowrap,stretch,flex-start,0rem);
     align-items: center;
     gap: 1.5rem;
 

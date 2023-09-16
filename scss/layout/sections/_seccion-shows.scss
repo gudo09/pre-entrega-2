@@ -1,7 +1,19 @@
-.lista-shows {
-  margin: 3rem 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
+.seccion-shows {
+  @extend .seccion-transparente;
+  
+  &__titulo {
+    @extend .seccion-transparente__titulo;
+  }
+
+  &__lista{
+    @extend .seccion-transparente;
+    @extend .seccion-transparente--sin-fondo;
+    
+    @include mixin-flex-col(nowrap,flex-start,flex-start,3rem);
+  }
 }
+
+
+
+
+

@@ -1,0 +1,6 @@
+.btn-comprar-entradas {
+  @extend .btn-comprar;
+  border-radius: 1rem;
+  width: 12rem;
+  padding: 1rem 2rem;
+}

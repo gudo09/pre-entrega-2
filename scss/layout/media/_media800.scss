@@ -1,1 +1,4 @@
-@import"../../components/botones/boton-nav-dropdown";
+@media(max-width: 800px){
+  @import"../../layout/navbar/navbar--responsive";
+
+}
