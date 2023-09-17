@@ -1,52 +1,41 @@
 
 .seccion-tienda{
-  h2 {
-    font: {
-      size: 3rem;
-    }
+  @extend .seccion-transparente;
+  &__remeras {
+    @extend .seccion-transparente;
+    padding: 3rem 0rem;
+  }
+  
+  &__grilla {
+    width: 95%;
+    @include mixin-grid(2,stretch,center,3rem,1rem);
+    justify-content: center;
   }
 
-  @include mixin-flex-col( nowrap,center,flex-start,0rem);
-  .sub-seccion-remeras {
-    width: 90%;
-    margin: 2rem 0rem;
-    padding: {
-      top: 3rem;
-      bottom: 4rem;
-      left: 3rem;
-      right: 3rem;
-    }
-    background-color: rgba($color-fondo-tienda-div, 0.3);
-    backdrop-filter: blur( 0.125rem );
-    border-radius: 1.25rem;
+  &__titulo {
+    @extend .seccion-transparente__titulo;
   }
 
-  .sub-seccion-discos {
-    @extend .sub-seccion-remeras;
-    background: {
-      color: rgba($color-fondo-sub-seccion-discos, .6);
-    }
-  }
-
-  >div {
-    >ul {
-      @include mixin-grid(2, center, center, 2rem, 2rem);
-      justify-content: center;
-    }
-
-    >h3 {
-      margin-bottom: 3rem;
+  &__subtitulo {
+    grid-column: 1/-1;
     font: {
       size: 2.6rem;
       weight: 700;
     }
-
-      text: {
-        decoration: underline;
-        align: center;
-      }
+    text: {
+      decoration: underline;
+      align: center;
     }
   }
+
+
+  &__discos {
+    @extend .seccion-tienda__remeras;
+    background: {
+      color: rgba($color-fondo-sub-seccion-discos, 0.15);
+    }
+  }
+
 }
 
 
