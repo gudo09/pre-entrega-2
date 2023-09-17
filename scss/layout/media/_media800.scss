@@ -1,4 +1,4 @@
-@media(max-width: 800px){
-  @import"../../layout/navbar/navbar--responsive";
+@include responsive-design ( 800px ) {
+  
 
 }

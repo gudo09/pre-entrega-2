@@ -22,7 +22,6 @@ textarea {
   resize: none;
 }
 main {
-  z-index: 1;
   @include mixin-flex-col(nowrap, flex-start, center, 0rem);
 }
 

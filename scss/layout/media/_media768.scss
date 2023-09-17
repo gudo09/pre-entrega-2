@@ -1,4 +1,6 @@
-@media (max-width: 768px) {
+@include responsive-design ( 768px ) {
+  @import"../../layout/navbar/navbar--responsive";
+
   /*----------------------------------header----------------------------------------*/
   .banner-generico {
     h1 {

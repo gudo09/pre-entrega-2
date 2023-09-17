@@ -1,4 +1,4 @@
-@media (max-width: 468px) {
+@include responsive-design(468px) {
   /*----------------------------------header----------------------------------------*/
   .banner-generico {
     h1 {

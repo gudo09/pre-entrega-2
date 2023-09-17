@@ -1,0 +1,28 @@
+/*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
+.formulario-contacto {
+  @include mixin-flex-col(nowrap,stretch,flex-start,0rem);
+  align-items: center;
+  max-width: 80rem;
+  padding: 2rem;
+  background-color: $color-fondo-formulario-contacto;
+  box-shadow: black 0rem 0rem 2rem;
+  backdrop-filter: blur( 0.125rem );
+  
+  &__titulo {
+    font: {
+      size: 3rem;
+      weight: 700;
+    }
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &__subtitulo {
+    margin: 3rem 0;
+    font: {
+      size: 2rem;
+      weight: 500;
+    }
+  }
+  
+}

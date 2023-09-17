@@ -1,9 +1,4 @@
 /*------------------------ESTILOS MAIN-------------------------------------------------------------*/
-.main-index {
-  @include mixin-flex-col(nowrap,center,space-evenly,4rem);
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
 .body-index {
   background-position-y: 40rem;
 }

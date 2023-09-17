@@ -37,7 +37,6 @@ textarea {
 }
 
 main {
-  z-index: 1;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -180,36 +179,27 @@ nav > ul span li:hover {
   }
 }
 /*------------------------ESTILOS MAIN-------------------------------------------------------------*/
-.main-index {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: space-evenly;
-  justify-content: center;
-  gap: 4rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
 .body-index {
   background-position-y: 40rem;
 }
 
 /*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
 .main-contacto {
-  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  justify-content: center;
+  gap: 0rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
   background-image: url(../assets/img/fondo-contacto-2.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.seccion-transparente, .seccion-shows__lista, .seccion-shows, .seccion-tienda__remeras, .seccion-tienda__discos, .seccion-tienda, .seccion-discografia__lista, .seccion-discografia {
+.seccion-transparente, .seccion-shows__lista, .seccion-shows, .seccion-tienda__remeras, .seccion-tienda__discos, .seccion-tienda, .seccion-discografia__lista, .seccion-discografia, .seccion-novedades {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -227,7 +217,7 @@ nav > ul span li:hover {
   border-width: 0.0625rem;
   border-color: rgba(255, 255, 255, 0.18);
 }
-.seccion-transparente__titulo, .seccion-shows__titulo, .seccion-tienda__titulo, .seccion-discografia__titulo {
+.seccion-transparente__titulo, .seccion-shows__titulo, .seccion-tienda__titulo, .seccion-discografia__titulo, .seccion-novedades__titulo {
   align-self: flex-start;
   margin-top: 2rem;
   padding: 0rem 5rem;
@@ -239,6 +229,10 @@ nav > ul span li:hover {
   box-shadow: none;
   background: none;
   backdrop-filter: none;
+}
+
+.seccion-novedades__titulo {
+  margin-bottom: 2rem;
 }
 
 /*------------------------ESTILOS SECCION DISCOGRAFIA-------------------------------------------------------------*/
@@ -273,30 +267,46 @@ nav > ul span li:hover {
 
 /*------------------------ESTILOS SECCION LANZAMIENTOS-------------------------------------------------------------*/
 .seccion-lanzamiento, .seccion-videoclip {
-  display: flex;
-  width: 80%;
-  border-radius: 0.9375rem;
+  width: 95%;
+  margin-bottom: 2rem;
   padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12rem;
+  flex-direction: row-reverse;
+  border-radius: 0.9375rem;
   box-shadow: 0.3125rem 0.3125rem 0.4rem rgba(0, 0, 0, 0.532);
   background-color: #f4f4ee;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  gap: 12.5rem;
 }
-.seccion-lanzamiento div h2, .seccion-videoclip div h2 {
+.seccion-lanzamiento__titulo, .seccion-videoclip__titulo {
   padding-bottom: 2rem;
   text-align: end;
   font-size: 2.3rem;
 }
-.seccion-lanzamiento div article, .seccion-videoclip div article {
+.seccion-lanzamiento__texto, .seccion-videoclip__texto {
   font-size: 1.5625rem;
   text-align: justify;
   padding-bottom: 2rem;
 }
-.seccion-lanzamiento iframe, .seccion-videoclip iframe {
-  width: 100rem;
-  height: 22rem;
+.seccion-lanzamiento__spotify, .seccion-videoclip__youtube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 0.75rem;
+}
+.seccion-lanzamiento .container__texto, .seccion-videoclip .container__texto {
+  width: 150%;
+}
+.seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 33%;
 }
 
 .seccion-videoclip {
@@ -304,22 +314,20 @@ nav > ul span li:hover {
   flex-direction: column;
   gap: 0rem;
 }
-.seccion-videoclip .div-videoclip {
-  width: 100%;
+.seccion-videoclip__youtube {
+  border-radius: 0.9375rem;
 }
-.seccion-videoclip div h2 {
+.seccion-videoclip__titulo {
+  text-align: left;
   color: #f4f4ee;
-  padding-bottom: 2rem;
 }
-.seccion-videoclip div article {
+.seccion-videoclip__texto {
   color: #f4f4ee;
   padding-bottom: 2rem;
   width: 60%;
 }
-.seccion-videoclip div iframe {
-  width: 100%;
-  height: 45rem;
-  border-radius: 0.9375rem;
+.seccion-videoclip .container__youtube {
+  padding-bottom: 56.25%;
 }
 
 .seccion-tienda__remeras, .seccion-tienda__discos {
@@ -573,7 +581,7 @@ nav > ul span li:hover {
 }
 
 /*------------------------ESTILOS BOTONES-------------------------------------------------------------*/
-form div button {
+.btn-enviar-formulario {
   width: 9.375rem;
   margin: 2rem;
   padding: 0.75rem 0rem;
@@ -605,95 +613,6 @@ form div button {
   padding: 1rem 2rem;
 }
 
-/*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
-.formulario-contacto {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: stretch;
-  gap: 0rem;
-  align-items: center;
-  width: 90%;
-  padding: 2rem;
-  background-color: rgba(185, 163, 185, 0.7960784314);
-  box-shadow: black 0rem 0rem 2rem;
-  backdrop-filter: blur(0.125rem);
-}
-.formulario-contacto > fieldset {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: stretch;
-  gap: 0rem;
-  align-items: center;
-  gap: 1.5rem;
-}
-.formulario-contacto > fieldset legend {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 1rem;
-}
-.formulario-contacto > fieldset > h2 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-}
-.formulario-contacto > fieldset > .section-form {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: center;
-  gap: 2rem;
-}
-.formulario-contacto > fieldset > .section-form > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.formulario-contacto > fieldset > .section-form > div label {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.formulario-contacto > fieldset > .section-form > div input {
-  width: 100%;
-  height: 3rem;
-  text-indent: 0.5rem;
-}
-.formulario-contacto > fieldset > .section-form > div textarea {
-  margin-top: 0.5rem;
-  padding-top: 0.7rem;
-  text-indent: 0.7rem;
-  font-size: 1rem;
-  width: 100%;
-  height: 20rem;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-pais {
-  grid-column: 1/3;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-nombre {
-  grid-column: 3/5;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-apellido {
-  grid-column: 5/7;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-email {
-  grid-column: 1/4;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-telefono {
-  grid-column: 4/7;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-asunto {
-  grid-column: 1/4;
-}
-.formulario-contacto > fieldset > .section-form > .container-form-mensaje {
-  grid-column: 1/7;
-}
-
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
 .logos-seguinos {
   width: 100%;
@@ -713,6 +632,249 @@ form div button {
   transition: transform 0.3s;
 }
 
+/*------------------------ESTILOS FORMULARIO CONTACTO-------------------------------------------------------------*/
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: stretch;
+  gap: 0rem;
+  align-items: center;
+  max-width: 80rem;
+  padding: 2rem;
+  background-color: rgba(185, 163, 185, 0.7960784314);
+  box-shadow: black 0rem 0rem 2rem;
+  backdrop-filter: blur(0.125rem);
+}
+.formulario-contacto__titulo {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+}
+.formulario-contacto__subtitulo {
+  margin: 3rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.formulario-contacto__grupo-datos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: stretch;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+.formulario-contacto__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.formulario-contacto__container--pais {
+  grid-column: 1/3;
+}
+.formulario-contacto__container--nombre {
+  grid-column: 3/5;
+}
+.formulario-contacto__container--apellido {
+  grid-column: 5/7;
+}
+.formulario-contacto__container--email {
+  grid-column: 1/4;
+}
+.formulario-contacto__container--telefono {
+  grid-column: 4/7;
+}
+.formulario-contacto__container--asunto {
+  grid-column: 1/5;
+}
+.formulario-contacto__container--mensaje {
+  grid-column: 1/-1;
+}
+.formulario-contacto__label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.formulario-contacto__input, .formulario-contacto__textarea {
+  width: 100%;
+  height: 3rem;
+  text-indent: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+.formulario-contacto__textarea {
+  height: 20rem;
+  padding-top: 0.7rem;
+  text-indent: 0.7rem;
+}
+
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
+@media screen and (max-width: 1024px) {
+  .seccion-tienda > div > ul {
+    grid-template-columns: 1fr;
+  }
+  /*----------------------------------form contacto----------------------------------------*/
+  form div {
+    margin-bottom: 1rem;
+  }
+  form div button {
+    margin-bottom: 1.5rem;
+    padding: 0.3125rem;
+    font-weight: 700;
+  }
+  form legend {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  form fieldset h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  form label {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos {
+    width: 100% !important;
+  }
+  .ul-discos > h2 {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav, .nav-bar {
+    background-color: #1d1f1f;
+  }
+  nav i::before, .nav-bar i::before {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0rem;
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-top: 15vh;
+    padding-bottom: 40vh;
+    right: -100%;
+    z-index: 100;
+    background-color: #77527b;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 3.2rem;
+    margin-left: 1rem;
+  }
+  .menu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #f4f4ee;
+  }
+  .close-menu, .open-menu {
+    position: absolute;
+    font-size: 3rem;
+    top: 2.6rem;
+    right: 25px;
+    color: #f4f4ee;
+  }
+  .open-menu {
+    cursor: pointer;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  /*----------------------------------header----------------------------------------*/
+  .banner-generico h1 {
+    font-size: 2rem;
+  }
+  /*----------------------------------navbar----------------------------------------*/
+  nav > ul {
+    width: 100%;
+  }
+  nav > ul > li a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  /*----------------------------------form contacto----------------------------------------*/
+  form legend {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  form fieldset h2 {
+    text-align: left;
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+  form label, form input, form textarea {
+    font-size: 0.8rem;
+  }
+  form div button {
+    font-size: 1rem;
+  }
+  .container-form-pais {
+    grid-column: 1/7 !important;
+  }
+  .container-form-nombre {
+    grid-column: 1/7 !important;
+  }
+  .container-form-apellido {
+    grid-column: 1/7 !important;
+  }
+  .container-form-email {
+    grid-column: 1/7 !important;
+  }
+  .container-form-telefono {
+    grid-column: 1/7 !important;
+  }
+  .container-form-asunto {
+    grid-column: 1/7 !important;
+  }
+  .container-form-mensaje {
+    grid-column: 1/7 !important;
+  }
+  /*----------------------------------listado discos----------------------------------------*/
+  .ul-discos > h2 {
+    font-size: 1.75rem !important;
+  }
+  /*----------------------------------footer----------------------------------------*/
+  footer p {
+    font-size: 0.87rem;
+  }
+  .seccion-tienda > div > ul > .card-tienda {
+    width: 10rem;
+    margin: 0;
+  }
+  .seccion-tienda > div > ul > .card-tienda-texto {
+    margin-right: 0rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  /*----------------------------------form contacto----------------------------------------*/
+  form legend {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  form h2 {
+    font-size: 1.025rem;
+  }
+  form label, form input, form textarea {
+    font-size: 0.75rem;
+  }
+  form div button {
+    font-size: 0.75rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

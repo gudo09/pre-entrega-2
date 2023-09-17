@@ -1,12 +1,9 @@
 /*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
 .main-contacto {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ @include mixin-flex-row(nowrap, center, center, 0rem);
   padding: {
-    top: 2rem;
-    bottom: 2rem;
+    top: 4rem;
+    bottom: 8rem;
   }
   background: {
     image: url(../assets/img/fondo-contacto-2.webp);

@@ -21,8 +21,6 @@
   gap: $gap;
 }
 
-
-
 @mixin width-height($width, $height) {
   width: $width;
   height: $height;
@@ -40,4 +38,10 @@
 @mixin mixin-grid-auto-row-col ($tamanio-fila, $tamanio-columna) {
   grid-auto-rows: $tamanio-fila;
   grid-auto-columns: $tamanio-columna;
+}
+
+@mixin responsive-design ( $medida ) {
+  @media screen and (max-width: $medida) {
+    @content;
+  }
 }

@@ -1,0 +1,9 @@
+.seccion-novedades{
+  @extend .seccion-transparente;
+
+  &__titulo {
+    @extend .seccion-transparente__titulo;
+    margin-bottom: 2rem;
+  }
+}
+

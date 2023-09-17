@@ -1,4 +1,4 @@
-@media (max-width: 1750px) {
+@include responsive-design ( 1750px ) {
   /*----------------------------------listado discos----------------------------------------*/
   .ul-discos {
     grid-template-columns: 1fr 1fr 1fr !important;

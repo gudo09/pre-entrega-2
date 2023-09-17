@@ -1,177 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto • El cuarteto de nos</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <h1 class="header__titulo">EL CUARTETO DE NOS</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto • El cuarteto de nos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <h1 class="header__titulo">EL CUARTETO DE NOS</h1>
+    </div>
+
+    <nav>
+      <ul class='nav-bar'>
+        <input type='checkbox' id='check' />
+        <span class="menu">
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../pages/tienda.html">TIENDA</a></li>
+          <li><a href="../pages/discografia.html">DISCOGRAFIA</a></li>
+          <li><a href="../pages/shows.html">SHOWS</a></li>
+          <li><a href="#">CONTACTO</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-contacto">
+    <form action="" class="formulario-contacto">
+      <fieldset>
+        <legend class="formulario-contacto__titulo">Formulario de contacto</legend>
+        <h2 class="formulario-contacto__subtitulo">
+          Si tienes consultas sobre el estado de tus productos, escribe al
+          proveedor de las tiendas de Cada País seleccionando el formulario en
+          las pestañas.
+        </h2>
+        <section class="formulario-contacto__grupo-datos">
+          <div class="formulario-contacto__container--pais">
+            <label class="formulario-contacto__label" for="">País</label>
+            <input class="formulario-contacto__input" type="text" id="pais" placeholder="¿Desde qué país nos escribís?" />
+          </div>
+          <div class="formulario-contacto__container--nombre">
+            <label class="formulario-contacto__label" for="">Nombre</label>
+            <input class="formulario-contacto__input" type="text" id="nombre" placeholder="Escribí acá tu/s nombre/s" />
+          </div>
+          <div class="formulario-contacto__container--apellido">
+            <label class="formulario-contacto__label" for="">Apellido</label>
+            <input class="formulario-contacto__input" type="text" id="apellido" placeholder="Escribí acá tu/s apellido/s" />
+          </div>
+          <div class="formulario-contacto__container--email">
+            <label class="formulario-contacto__label" for="">Correo electrónico</label>
+            <input class="formulario-contacto__input" type="email" id="e-mail" placeholder="Ingresá tu e-mail" />
+          </div>
+          <div class="formulario-contacto__container--telefono">
+            <label class="formulario-contacto__label" for="">Teléfono</label>
+            <input class="formulario-contacto__input" type="tel" id="telefono" placeholder="Escribí acá tu número de teléfono" />
+          </div>
+          <div class="formulario-contacto__container--asunto">
+            <label class="formulario-contacto__label" for="">Asunto</label>
+            <input class="formulario-contacto__input" type="text" id="asunto" placeholder="Escribí acá el por qué nos contactás" />
+          </div>
+          <div class="formulario-contacto__container--mensaje">
+            <label class="formulario-contacto__label" for="">Mensaje</label>
+            <textarea class="formulario-contacto__textarea" placeholder="Dejanos tu mensaje" name="" id=""></textarea>
+        </section>
+      </fieldset>
+      <div class="formulario-contacto__container--btn-enviar">
+        <button class="btn-enviar-formulario" type="submit">Enviar</button>
       </div>
+    </form>
+  </main>
 
-      <nav>
-        <ul class='nav-bar'>
-            <input type='checkbox' id='check' />
-            <span class="menu">
-              <li><a href="../index.html">INICIO</a></li>
-              <li><a href="../pages/tienda.html">TIENDA</a></li>
-              <li><a href="../pages/discografia.html">DISCOGRAFIA</a></li>
-              <li><a href="../pages/shows.html">SHOWS</a></li>
-              <li><a href="#">CONTACTO</a></li>
-              <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-            </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
-      </nav>
-    </header>
+  <footer class="footer">
+    <section class="footer__seguinos">
+      <h3>Seguinos en nuestras redes</h3>
+      <ul class="logos-seguinos">
+        <li>
+          <a href="https://open.spotify.com/artist/13JJKrUewC1CJYmIDXQNoH?si=tO7H5LH3Ti6OZT5tAxYnOg"
+            target="_blank"><img src="../assets/img/logos/spotify.svg" alt="" /></a>
+        </li>
+        <li class="logo-youtube">
+          <a href="https://www.youtube.com/channel/UCHIalb8oZehqMPum16ImmGQ" target="_blank"><img
+              src="../assets/img/logos/youtube.svg" alt="" /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/cuartetodenosok/" target="_blank"><img
+              src="../assets/img/logos/instagram.svg" alt="" /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100044328944720" target="_blank"><img
+              src="../assets/img/logos/facebook.svg" alt="" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/cuartetodenos" target="_blank"><img src="../assets/img/logos/twitter-x.svg"
+              alt="" /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="footer__copyright copyright">
+      <p class="copyright__texto">Copyright 2023 - El cuarteto de nos - Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
 
-    <main class="main-contacto container-fluid p-0">
-      <form action="" class="formulario-contacto container p-0 my-5">
-        <fieldset class="container-fluid m-0 p-lg-3">
-          <legend class="text-center">Forlmulario de contacto</legend>
-          <h2>
-            Si tienes consultas sobre el estado de tus productos, escribe al
-            proveedor de las tiendas de Cada País seleccionando el formulario en
-            las pestañas.
-          </h2>
-          <section class="container-fluid">
-            <div class="row">
-              <div class="col-12 px-0 d-flex col-xl-4 gap-2 pe-xl-3 col-lg-12">
-                <label for="">País</label>
-                <input
-                  class="col"
-                  type="text"
-                  id="pais"
-                  placeholder="¿Desde qué país nos escribís?"
-                />
-              </div>
-              <div
-                class="col-12 px-0 d-flex col-xl-4 gap-2 pe-xl-3 col-lg-6 pe-lg-3"
-              >
-                <label for="">Nombre</label>
-                <input
-                  class="col"
-                  type="text"
-                  id="nombre"
-                  placeholder="Escribí acá tu/s nombre/s"
-                />
-              </div>
-              <div class="col-12 px-0 d-flex col-xl-4 gap-2 col-lg-6">
-                <label for="">Apellido</label>
-                <input
-                  class="col"
-                  type="text"
-                  id="apellido"
-                  placeholder="Escribí acá tu/s apellido/s"
-                />
-              </div>
-              <div
-                class="col-12 px-0 d-flex col-xl-6 gap-2 pe-xl-3 col-lg-7 pe-lg-3"
-              >
-                <label class="" for="">Correo electrónico</label>
-                <input
-                  class="col"
-                  type="email"
-                  id="e-mail"
-                  placeholder="Ingresá tu e-mail"
-                />
-              </div>
-              <div class="col-12 px-0 d-flex col-xl-6 gap-2 col-lg-5">
-                <label class="" for="">Teléfono</label>
-                <input
-                  class="col"
-                  type="tel"
-                  id="telefono"
-                  placeholder="Escribí acá tu número de teléfono"
-                />
-              </div>
-              <div class="col-12 px-0 d-flex col-xl-7 gap-2">
-                <label class="" for="">Asunto</label>
-                <input
-                  class="col"
-                  type="text"
-                  id="asunto"
-                  placeholder="Escribí acá el por qué nos contactás"
-                />
-              </div>
-              <div class="col-12 px-0 d-flex flex-column col-xl-12">
-                <label class="col-xl-12" for="">Mensaje</label>
-                <div class="col-xl-12 row container-fluid m-0 px-0">
-                  <textarea
-                    placeholder="Dejanos tu mensaje"
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-          </section>
-        </fieldset>
-        <div class="row col-4 d-flex justify-content-center">
-          <button type="submit">Enviar</button>
-        </div>
-      </form>
-    </main>
-
-    <footer class="footer">
-      <section class="footer__seguinos">
-        <h3>Seguinos en nuestras redes</h3>
-        <ul class="logos-seguinos">
-          <li>
-            <a
-              href="https://open.spotify.com/artist/13JJKrUewC1CJYmIDXQNoH?si=tO7H5LH3Ti6OZT5tAxYnOg"
-              target="_blank"
-              ><img src="../assets/img/logos/spotify.svg" alt=""
-            /></a>
-          </li>
-          <li class="logo-youtube">
-            <a
-              href="https://www.youtube.com/channel/UCHIalb8oZehqMPum16ImmGQ"
-              target="_blank"
-              ><img
-              src="../assets/img/logos/youtube.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/cuartetodenosok/" target="_blank"
-              ><img src="../assets/img/logos/instagram.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/profile.php?id=100044328944720"
-              target="_blank"
-              ><img src="../assets/img/logos/facebook.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/cuartetodenos" target="_blank"
-              ><img src="../assets/img/logos/twitter-x.svg" alt=""
-            /></a>
-          </li>
-        </ul>
-      </section>
-      <div class="footer__copyright copyright">
-        <p class="copyright__texto">Copyright 2023 - El cuarteto de nos - Todos los derechos reservados</p>
-      </div>
-    </footer>
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
