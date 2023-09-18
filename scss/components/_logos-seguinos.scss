@@ -1,18 +1,31 @@
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
-.logos-seguinos {
+.seguinos {
   @include width-height(100%,7rem);
-  @include mixin-flex-row(nowrap,center,space-evenly,0rem);
-  li { 
-    a { 
-      img {
-          height: 4.25rem;
-      }
-    }
+  @include mixin-flex-col(nowrap,center,center,2rem);
+  margin: 4rem 0rem;
 
+
+  &__titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: $color-blanco;
+  }
+
+  &__lista {
+    justify-self: center;
+    min-width: 70%;
+    max-width: 70rem;
+    @include mixin-flex-row(wrap,center,space-evenly,1rem);
+  }
+  
+  &__imagen {
+    height: 4.25rem;
+  }
+
+  &__item { 
     &:hover {
       transform: scale(1.2);
       transition: transform 0.3s;
     }
   }
-  
 }

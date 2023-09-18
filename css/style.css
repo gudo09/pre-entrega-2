@@ -87,8 +87,8 @@ ul {
 /*------------------------ESTILOS header main-------------------------------------------------------------*/
 .header--main {
   width: 100%;
-  height: 40rem;
-  background-image: url(../../assets/img/hero-image-2.jpg);
+  height: 35rem;
+  background-image: url(https://i.ibb.co/kmRJRSh/Eq-Bnrr-XXMAMxq-Nr.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -248,23 +248,6 @@ nav > ul span li:hover {
   grid-auto-columns: auto;
 }
 
-/*------------------------ESTILOS SECCION SEGUINOS-------------------------------------------------------------*/
-.footer__seguinos {
-  width: 60%;
-  margin-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-.footer__seguinos h3 {
-  margin: 0;
-  color: #f4f4ee;
-  font-size: 2rem;
-}
-
 /*------------------------ESTILOS SECCION LANZAMIENTOS-------------------------------------------------------------*/
 .seccion-lanzamiento, .seccion-videoclip {
   width: 95%;
@@ -366,7 +349,6 @@ nav > ul span li:hover {
 /*------------------------ESTILOS FOOTER-------------------------------------------------------------*/
 .footer {
   margin-top: auto;
-  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -374,7 +356,7 @@ nav > ul span li:hover {
   justify-content: center;
   gap: 0rem;
 }
-.footer__copyright {
+.footer__copyright-contenedor {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -385,7 +367,7 @@ nav > ul span li:hover {
   height: 4rem;
   background-color: #1d1f1f;
 }
-.footer__copyright .copyright__texto {
+.footer__copyright-texto {
   margin: 0;
   font-size: 1.5rem;
   color: #f4f4ee;
@@ -614,20 +596,37 @@ nav > ul span li:hover {
 }
 
 /*------------------------ESTILOS LOGOS SEGUINOS-------------------------------------------------------------*/
-.logos-seguinos {
+.seguinos {
   width: 100%;
   height: 7rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 0rem;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0rem;
 }
-.logos-seguinos li a img {
+.seguinos__titulo {
+  text-align: center;
+  font-size: 2rem;
+  color: #f4f4ee;
+}
+.seguinos__lista {
+  justify-self: center;
+  min-width: 70%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.seguinos__imagen {
   height: 4.25rem;
 }
-.logos-seguinos li:hover {
+.seguinos__item:hover {
   transform: scale(1.2);
   transition: transform 0.3s;
 }
@@ -716,36 +715,8 @@ nav > ul span li:hover {
 
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
 @media screen and (max-width: 1024px) {
-  .seccion-tienda > div > ul {
-    grid-template-columns: 1fr;
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form div {
-    margin-bottom: 1rem;
-  }
-  form div button {
-    margin-bottom: 1.5rem;
-    padding: 0.3125rem;
-    font-weight: 700;
-  }
-  form legend {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  form fieldset h2 {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  form label {
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    width: 100% !important;
-  }
-  .ul-discos > h2 {
-    font-size: 2rem !important;
+  .footer__copyright-texto {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -757,10 +728,10 @@ nav > ul span li:hover {
   }
   .menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     gap: 0rem;
     width: 70%;
     height: 100vh;
@@ -784,9 +755,9 @@ nav > ul span li:hover {
   }
   .close-menu, .open-menu {
     position: absolute;
-    font-size: 3rem;
-    top: 2.6rem;
-    right: 25px;
+    font-size: 2rem;
+    top: 0.7rem;
+    right: 2rem;
     color: #f4f4ee;
   }
   .open-menu {
@@ -795,17 +766,25 @@ nav > ul span li:hover {
   #check:checked ~ .menu {
     right: 0;
   }
+  .header {
+    height: 4rem;
+  }
+  .header__titulo {
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  .seguinos {
+    margin: 2rem 0rem;
+  }
+  .seguinos__titulo {
+    font-size: 1.5rem;
+  }
+  .seguinos__imagen {
+    height: 3rem;
+  }
   /*----------------------------------header----------------------------------------*/
   .banner-generico h1 {
     font-size: 2rem;
-  }
-  /*----------------------------------navbar----------------------------------------*/
-  nav > ul {
-    width: 100%;
-  }
-  nav > ul > li a {
-    font-size: 1rem;
-    padding: 1rem;
   }
   /*----------------------------------form contacto----------------------------------------*/
   form legend {
@@ -848,16 +827,22 @@ nav > ul span li:hover {
   .ul-discos > h2 {
     font-size: 1.75rem !important;
   }
-  /*----------------------------------footer----------------------------------------*/
-  footer p {
-    font-size: 0.87rem;
+}
+@media screen and (max-width: 640px) {
+  .header__titulo {
+    font-size: 1.5rem;
   }
-  .seccion-tienda > div > ul > .card-tienda {
-    width: 10rem;
-    margin: 0;
+}
+@media screen and (max-width: 468px) {
+  /*----------------------------------header----------------------------------------*/
+  .header__titulo {
+    font-size: 1rem;
   }
-  .seccion-tienda > div > ul > .card-tienda-texto {
-    margin-right: 0rem;
+  .footer__copyright-texto {
+    font-size: 1rem;
+  }
+  .seguinos__imagen {
+    height: 2.5rem;
   }
 }
 @media screen and (max-width: 320px) {

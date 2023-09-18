@@ -1,84 +1,21 @@
 @include responsive-design(468px) {
   /*----------------------------------header----------------------------------------*/
-  .banner-generico {
-    h1 {
-      font-size: 1.5rem;
+  .header {
+    &__titulo {
+      font-size: 1rem;
     }
   }
   
-  
-  /*----------------------------------form contacto----------------------------------------*/
-  form {
-    div {
-      margin-bottom: 0.5rem;
-    }
-
-    legend {
-      font: {
-        size: 1.75rem;
-        weight: 700;
-      }
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      font: {
-        size: 1.15rem;
-        weight: 500;
-      }
-    }
-
-    label, input, textarea{
-      font-size: small;
-    }
-
-    div {
-      button {
-        font-size: small;
-      }
+  .footer {
+    &__copyright-texto {
+      font-size: 1rem;
     }
   }
 
-  /*----------------------------------listado discos----------------------------------------*/
-  .seccion-discografia {
-    padding: 0;
-
-    .ul-discos {
-      grid-auto-rows: auto;
-      h2 {
-        font-size: 1.75rem;
-        text-align: center;
-      }
-      
-      li {
-        justify-content: space-between;
-        @include width-height(15rem,25rem);
-        img {
-          @include width-height(15rem,15rem);
-        }
-  
-        p {
-          font-size: 1.5rem;
-          padding: {
-            left: 0.75rem;
-            right: 0.75rem;
-          }
-        }
-  
-        a {
-          margin-bottom: 1rem;
-          font-size: 1rem;
-        }
-      }
-    }
-
-  }
-
-  /*----------------------------------footer----------------------------------------*/
-  footer {
-    height: 30px;
-    p {
-      font-size: 0.57rem;
+  .seguinos {
+    
+    &__imagen {
+      height: 2.5rem;
     }
   }
 }

@@ -1,49 +1,8 @@
 @include responsive-design ( 1024px ) {
-  .seccion-tienda>div {
-    >ul {
-      grid-template-columns: 1fr;
-    }
-  }
-  /*----------------------------------form contacto----------------------------------------*/
-  form {
-    div {
-      margin-bottom: 1rem;
-      button {
-        margin-bottom: 1.5rem;
-        padding: 0.3125rem;
-        font-weight: 700;
-      }
-    }
-  
-    legend {
-      font-size: 3rem;
-      font-weight: 600;
-    }
-  
-    fieldset {
-      h2 {
-        font: {
-          size: 2rem;
-          weight: 500;
-        }
-      }
-    }
-  
-    label {
-      font: {
-        size: 1.25rem;
-        weight: 400;
-      }
-    }
-  }
-  
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    width: 100% !important;
-    >h2 {
-      font-size: 2rem !important;
-    }
-  }
+  .footer {
 
-
+    &__copyright-texto {
+      font-size: 1.2rem;
+    }
+  }
 }

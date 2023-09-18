@@ -1,3 +1,7 @@
 @include responsive-design ( 640px ) {
-
+  .header {
+    &__titulo {
+      font-size: 1.5rem;
+    }
+  }
 }

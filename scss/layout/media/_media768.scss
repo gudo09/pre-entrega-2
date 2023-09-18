@@ -1,24 +1,54 @@
 @include responsive-design ( 768px ) {
   @import"../../layout/navbar/navbar--responsive";
 
+  .header {
+    height: 4rem;
+
+    &__titulo {
+      padding-left: 1rem;
+      font-size: 2rem;
+    }
+  }
+
+  .seguinos {
+    margin: 2rem 0rem;
+
+    &__titulo {
+      font-size: 1.5rem;
+    }
+    
+    &__imagen {
+      height: 3rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /*----------------------------------header----------------------------------------*/
   .banner-generico {
     h1 {
       font-size: 2rem;
     }
   }
-
-  /*----------------------------------navbar----------------------------------------*/
-  nav >ul {
-    width: 100%;
-    >li {
-      a {
-        font-size: 1rem;
-        padding: 1rem;
-      }
-    }
-  }
-
   
 
   /*----------------------------------form contacto----------------------------------------*/
@@ -80,27 +110,6 @@
   .ul-discos {
     >h2 {
       font-size: 1.75rem !important;
-    }
-  }
-
-  /*----------------------------------footer----------------------------------------*/
-  footer{
-    p {
-      font-size: 0.87rem;
-    }
-  }
-
-  .seccion-tienda{
-    >div {
-      >ul {
-        >.card-tienda {
-          width: 10rem;
-          margin: 0;
-          &-texto {
-            margin-right: 0rem;
-          }
-        }
-      }
     }
   }
 }
