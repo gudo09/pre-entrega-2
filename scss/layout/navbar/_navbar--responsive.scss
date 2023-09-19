@@ -1,16 +1,9 @@
-//.banner-generico {
-//  justify-content: flex-start;
-//  text-indent: 1rem;
-//}
 
-nav, .nav-bar {
+.nav-bar {
   background-color: $color-negro;
-  i::before {
-    display: block;
-  }
-}
 
-.menu {
+
+  &__menu {
     @include mixin-flex-col( nowrap, flex-start, center, 0rem);
     @include width-height(70%, 100vh);
     position: fixed;
@@ -23,37 +16,35 @@ nav, .nav-bar {
     z-index: 100;
     background-color: $color-navbar;
     transition: all 0.2s ease-in-out;
-    
-    li {
-      margin: {
-        top: 3.2rem;
-        left: 1rem;
-      }
-  
-      a {
-        padding: 10px;
-        text-decoration: none;
-        color: $color-blanco;
-      }
+  }
+
+  &__item {
+    margin: {
+      top: 3.2rem;
+      left: 1rem;
     }
+  }
 
+  &__enlace {
+    padding: 10px;
+    text-decoration: none;
+    color: $color-blanco;
+  }
+
+  &__close-menu, &__open-menu {
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    top: 0.7rem;
+    right: 2rem;
+    color: $color-blanco;
+  }
+
+  &__open-menu {
+    cursor: pointer;
+  }
 }
-.close-menu {
-  position: absolute;
-  font-size: 2rem;
-  top: 0.7rem;
-  right: 2rem;
-  color: $color-blanco;
-  
-}
 
-.open-menu {
-  @extend .close-menu;
-  cursor: pointer;
-
-}
-
-
-#check:checked ~ .menu {
+#check:checked ~ .nav-bar__menu {
   right: 0;
 }

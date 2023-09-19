@@ -103,59 +103,47 @@ ul {
 }
 
 /*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
-nav {
-  z-index: 3;
-  background-color: #77527b;
-  box-shadow: 0rem 0.125rem 1rem black;
-  display: flex;
-}
-nav #check {
-  display: none;
-}
-nav > ul {
-  width: 100%;
+.nav-bar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   gap: 0rem;
+  background-color: #77527b;
+  box-shadow: 0rem 0.125rem 1rem black;
+  width: 100%;
 }
-nav > ul i::before {
+.nav-bar #check {
   display: none;
 }
-nav > ul span {
+.nav-bar__menu {
   width: 80%;
   height: 5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 0rem;
 }
-nav > ul span li {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-}
-nav > ul span li a {
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 800;
-  color: #f4f4ee;
-}
-nav > ul span li a:hover {
-  text-shadow: 0px 0px 20px #38203b;
-}
-nav > ul span li:hover {
+.nav-bar__item:hover {
   cursor: pointer;
   -webkit-animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.nav-bar__enlace {
+  padding: 1rem;
+  color: #f4f4ee;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 800;
+}
+.nav-bar__enlace:hover {
+  text-shadow: 0px 0px 20px #38203b;
+}
+.nav-bar__close-menu, .nav-bar__open-menu {
+  display: none;
 }
 
 @-webkit-keyframes slide-top {
@@ -720,13 +708,10 @@ nav > ul span li:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  nav, .nav-bar {
+  .nav-bar {
     background-color: #1d1f1f;
   }
-  nav i::before, .nav-bar i::before {
-    display: block;
-  }
-  .menu {
+  .nav-bar__menu {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -744,26 +729,27 @@ nav > ul span li:hover {
     background-color: #77527b;
     transition: all 0.2s ease-in-out;
   }
-  .menu li {
+  .nav-bar__item {
     margin-top: 3.2rem;
     margin-left: 1rem;
   }
-  .menu li a {
+  .nav-bar__enlace {
     padding: 10px;
     text-decoration: none;
     color: #f4f4ee;
   }
-  .close-menu, .open-menu {
+  .nav-bar__close-menu, .nav-bar__open-menu {
+    display: block;
     position: absolute;
     font-size: 2rem;
     top: 0.7rem;
     right: 2rem;
     color: #f4f4ee;
   }
-  .open-menu {
+  .nav-bar__open-menu {
     cursor: pointer;
   }
-  #check:checked ~ .menu {
+  #check:checked ~ .nav-bar__menu {
     right: 0;
   }
   .header {
