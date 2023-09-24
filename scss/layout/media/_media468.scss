@@ -6,16 +6,46 @@
     }
   }
   
-  .footer {
-    &__copyright-texto {
-      font-size: 1rem;
+  .card-discografia {
+    min-width: 16rem;
+    max-width: 100%;
+
+    max-height: 30rem;
+
+    &__imagen {
+      @include width-height(16rem,16rem);
+    }
+
+    &__censura {
+      @include width-height(16rem,16rem);
+    }
+
+    &__titulo {
+      max-width: 15rem;
+      font-size: 1.5rem;
     }
   }
 
+  .seccion-discografia {
+    &__lista {
+      row-gap: 2rem;
+      grid-auto-rows: 30rem;
+    }
+  }
+
+  .seccion-transparente__titulo {
+    font-size: 1.8rem;
+  }
+  
   .seguinos {
-    
     &__imagen {
       height: 2.5rem;
+    }
+  }
+
+  .footer {
+    &__copyright-texto {
+      font-size: 1rem;
     }
   }
 }

@@ -29,7 +29,12 @@
 
   .seccion-discografia {
     &__lista {
-      @include mixin-grid(2, stretch, center, 2rem, 1rem);
+      @include mixin-grid(2, stretch, stretch, 2rem, 1rem);
+      justify-items: center;
     }
+  }
+
+  .card-discografia {
+    width: 100%;
   }
 }

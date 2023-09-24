@@ -1,8 +1,6 @@
 @include responsive-design ( 768px ) {
   @include nav-bar-responsive();
 
-  
-
   .header--main {
     background-image: none;
     .header {
@@ -81,6 +79,14 @@
 
     .btn-comprar {
       margin: 2rem auto;
+    }
+  }
+
+  .seccion-discografia {
+    &__lista {
+      @include mixin-grid(1, stretch, stretch, 2rem, 1rem);
+      justify-items: center;
+      max-width: 90%;
     }
   }
 }
