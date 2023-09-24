@@ -4,4 +4,11 @@
       font-size: 1.5rem;
     }
   }
+
+  .seccion-tienda {
+    &__grilla {
+      width: 100%;
+      @include mixin-grid(1,stretch,center,2rem,0rem);
+    }
+  }
 }

@@ -45,7 +45,43 @@
     margin-bottom: 0rem;
   }
 
+  .seccion-tienda {
+    &__grilla {
+      width: 100%;
+      @include mixin-grid(2,stretch,center,2rem,0rem);
+    }
 
+    &__discos {
+      .seccion-tienda__subtitulo{
+        color: $color-blanco
+      }
+    }
+  }
+
+  .card-tienda {
+    @include mixin-flex-col( nowrap, space-between, center, 0rem);
+    width: 18.75rem;
+    height: 35rem;
+
+    &__descripcion {
+      margin-top: 1rem
+    }
+
+    &__texto {
+      width: 85%;
+      margin-right: 0rem;
+      text-align: center;
+    }
+
+    &__container-precio {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-comprar {
+      margin: 2rem auto;
+    }
+  }
 
 
 

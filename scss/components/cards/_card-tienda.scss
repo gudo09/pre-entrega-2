@@ -1,43 +1,37 @@
 /*------------------------cards tienda-------------------------------------------------------------*/
-.seccion-tienda{
-  >div {
-    >ul {
-      >.card-tienda {
-        width: 45rem;
-        @include mixin-flex-row( nowrap, center, flex-start, 3rem);
-        border: {
-          style: solid;
-          radius: 1.25rem;
-          color: $color-borde-card-tienda;
-          width: 0.25rem;
-        }
-        background-color: $color-fondo-card-tienda;
-        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
-        overflow: hidden;
+.card-tienda {
+  width: 45rem;
+  @include mixin-flex-row( nowrap, center, flex-start, 3rem);
+  border: {
+    style: solid;
+    radius: 1.25rem;
+    color: $color-borde-card-tienda;
+    width: 0.25rem;
+  }
+  background-color: $color-fondo-card-tienda;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
+  overflow: hidden;
 
-        .img-card-tienda {
-          @include width-height(18.75rem, 18.75rem);
-          object-fit: cover;
-        }
+  &__imagen {
+    @include width-height(18.75rem, 18.75rem);
+    object-fit: cover;
+  }
 
-        >.card-tienda-texto {
-          width: 70%;
-          margin-right: 2rem;
-          @include mixin-flex-col( nowrap, stretch, flex-start, 0.75rem);
-          
-          >h4 {
-            font-size: 1.75rem;
-          }
-  
-          >.div-precio {
-          @include mixin-flex-row( nowrap, flex-start, flex-start, 0.75rem);
-          >.valor-precio {
-            font-weight: 700;
-          }
-        }
-        }
-      }
+  &__descripcion {
+    font-size: 1.75rem;
+  }
 
-    }
+  &__texto {
+    width: 70%;
+    margin-right: 2rem;
+    @include mixin-flex-col( nowrap, stretch, flex-start, 0.75rem);
+  }
+
+  &__container-precio {
+    @include mixin-flex-row( nowrap, flex-start, flex-start, 0.75rem);
+  }
+
+  &__valor {
+    font-weight: 700;
   }
 }

@@ -432,7 +432,7 @@ ul {
   }
 }
 /*------------------------cards tienda-------------------------------------------------------------*/
-.seccion-tienda > div > ul > .card-tienda {
+.card-tienda {
   width: 45rem;
   display: flex;
   flex-direction: row;
@@ -448,12 +448,15 @@ ul {
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.213);
   overflow: hidden;
 }
-.seccion-tienda > div > ul > .card-tienda .img-card-tienda {
+.card-tienda__imagen {
   width: 18.75rem;
   height: 18.75rem;
   object-fit: cover;
 }
-.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto {
+.card-tienda__descripcion {
+  font-size: 1.75rem;
+}
+.card-tienda__texto {
   width: 70%;
   margin-right: 2rem;
   display: flex;
@@ -463,10 +466,7 @@ ul {
   justify-content: stretch;
   gap: 0.75rem;
 }
-.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > h4 {
-  font-size: 1.75rem;
-}
-.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > .div-precio {
+.card-tienda__container-precio {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -474,7 +474,7 @@ ul {
   justify-content: flex-start;
   gap: 0.75rem;
 }
-.seccion-tienda > div > ul > .card-tienda > .card-tienda-texto > .div-precio > .valor-precio {
+.card-tienda__valor {
   font-weight: 700;
 }
 
@@ -857,10 +857,56 @@ ul {
   .seccion-novedades {
     margin-bottom: 0rem;
   }
+  .seccion-tienda__grilla {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: stretch;
+    row-gap: 2rem;
+    column-gap: 0rem;
+  }
+  .seccion-tienda__discos .seccion-tienda__subtitulo {
+    color: #f4f4ee;
+  }
+  .card-tienda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0rem;
+    width: 18.75rem;
+    height: 35rem;
+  }
+  .card-tienda__descripcion {
+    margin-top: 1rem;
+  }
+  .card-tienda__texto {
+    width: 85%;
+    margin-right: 0rem;
+    text-align: center;
+  }
+  .card-tienda__container-precio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-tienda .btn-comprar, .card-tienda .btn-comprar-entradas {
+    margin: 2rem auto;
+  }
 }
 @media screen and (max-width: 640px) {
   .header__titulo {
     font-size: 1.5rem;
+  }
+  .seccion-tienda__grilla {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: stretch;
+    row-gap: 2rem;
+    column-gap: 0rem;
   }
 }
 @media screen and (max-width: 530px) {
