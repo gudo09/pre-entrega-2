@@ -26,4 +26,10 @@
       width: 100%;
     }
   }
+
+  .seccion-discografia {
+    &__lista {
+      @include mixin-grid(2, stretch, center, 2rem, 1rem);
+    }
+  }
 }
