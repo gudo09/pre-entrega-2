@@ -104,28 +104,22 @@ ul {
 
 /*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
 .nav-bar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
   background-color: #77527b;
   box-shadow: 0rem 0.125rem 1rem black;
-  width: 100%;
 }
 .nav-bar #check {
   display: none;
 }
 .nav-bar__menu {
-  width: 80%;
-  height: 5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: 0rem;
+  height: 5rem;
+  width: 80%;
+  margin: auto;
 }
 .nav-bar__item:hover {
   cursor: pointer;
@@ -259,7 +253,6 @@ ul {
 }
 .seccion-lanzamiento__texto, .seccion-videoclip__texto {
   font-size: 1.5625rem;
-  text-align: justify;
   padding-bottom: 2rem;
 }
 .seccion-lanzamiento__spotify, .seccion-videoclip__youtube {
@@ -315,6 +308,7 @@ ul {
   justify-content: center;
 }
 .seccion-tienda__subtitulo {
+  color: #1d1f1f;
   grid-column: 1/-1;
   font-size: 2.6rem;
   font-weight: 700;
@@ -702,7 +696,69 @@ ul {
 }
 
 /*----------------------------------MEDIA QUERIES----------------------------------------*/
+@media screen and (max-width: 1650px) {
+  .seccion-tienda__grilla {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header--main {
+    height: 30rem;
+  }
+  .body-index {
+    background-position-y: 30rem;
+  }
+  .seccion-lanzamiento, .seccion-videoclip {
+    gap: 2rem;
+  }
+  .seccion-lanzamiento .container__texto, .seccion-videoclip .container__texto {
+    width: 80%;
+  }
+  .seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
+    min-height: 22rem;
+  }
+  .seccion-videoclip__texto {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1024px) {
+  .header--main {
+    height: 25rem;
+  }
+  .body-index {
+    background-position-y: 30rem;
+  }
+  .nav-bar__menu {
+    width: 100%;
+    padding: 0 3rem;
+  }
+  .nav-bar__enlace {
+    font-size: 1.2rem;
+  }
+  .seccion-lanzamiento, .seccion-videoclip {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 0rem;
+  }
+  .seccion-lanzamiento .container__texto, .seccion-videoclip .container__texto {
+    width: 100%;
+  }
+  .seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
+    min-height: 22rem;
+  }
+  .seccion-tienda {
+    border: none;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+    width: 100%;
+  }
+  .seccion-tienda__titulo {
+    padding: 0rem 2rem;
+  }
   .footer__copyright-texto {
     font-size: 1.2rem;
   }
@@ -722,8 +778,8 @@ ul {
     height: 100vh;
     position: fixed;
     top: 0;
-    padding-top: 15vh;
-    padding-bottom: 40vh;
+    padding-top: 5vh;
+    padding-bottom: 30vh;
     right: -100%;
     z-index: 100;
     background-color: #77527b;
@@ -737,6 +793,7 @@ ul {
     padding: 10px;
     text-decoration: none;
     color: #f4f4ee;
+    font-size: 1.5rem;
   }
   .nav-bar__close-menu, .nav-bar__open-menu {
     display: block;
@@ -748,16 +805,34 @@ ul {
   }
   .nav-bar__open-menu {
     cursor: pointer;
+    position: fixed;
+    z-index: 92;
   }
   #check:checked ~ .nav-bar__menu {
     right: 0;
   }
   .header {
     height: 4rem;
+    width: 100%;
+    position: fixed;
+    z-index: 90;
+    box-shadow: 0.3125rem 0.3125rem 0.4rem rgba(0, 0, 0, 0.532);
   }
   .header__titulo {
     padding-left: 1rem;
     font-size: 2rem;
+  }
+  main {
+    padding-top: 2rem;
+  }
+  .header--main {
+    background-image: none;
+  }
+  .header--main .header__filtro {
+    background-color: #1d1f1f;
+  }
+  .body-index {
+    background-position-y: 4rem;
   }
   .seguinos {
     margin: 2rem 0rem;
@@ -768,55 +843,33 @@ ul {
   .seguinos__imagen {
     height: 3rem;
   }
-  /*----------------------------------header----------------------------------------*/
-  .banner-generico h1 {
-    font-size: 2rem;
+  .seccion-transparente, .seccion-novedades, .seccion-discografia, .seccion-discografia__lista, .seccion-tienda, .seccion-tienda__remeras, .seccion-tienda__discos, .seccion-shows, .seccion-shows__lista {
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border: none;
   }
-  /*----------------------------------form contacto----------------------------------------*/
-  form legend {
-    font-size: 2rem;
-    font-weight: 700;
+  .seccion-transparente__titulo, .seccion-novedades__titulo, .seccion-discografia__titulo, .seccion-tienda__titulo, .seccion-shows__titulo {
+    padding: 0 2rem;
   }
-  form fieldset h2 {
-    text-align: left;
-    font-size: 0.5rem;
-    font-weight: 500;
-  }
-  form label, form input, form textarea {
-    font-size: 0.8rem;
-  }
-  form div button {
-    font-size: 1rem;
-  }
-  .container-form-pais {
-    grid-column: 1/7 !important;
-  }
-  .container-form-nombre {
-    grid-column: 1/7 !important;
-  }
-  .container-form-apellido {
-    grid-column: 1/7 !important;
-  }
-  .container-form-email {
-    grid-column: 1/7 !important;
-  }
-  .container-form-telefono {
-    grid-column: 1/7 !important;
-  }
-  .container-form-asunto {
-    grid-column: 1/7 !important;
-  }
-  .container-form-mensaje {
-    grid-column: 1/7 !important;
-  }
-  /*----------------------------------listado discos----------------------------------------*/
-  .ul-discos > h2 {
-    font-size: 1.75rem !important;
+  .seccion-novedades {
+    margin-bottom: 0rem;
   }
 }
 @media screen and (max-width: 640px) {
   .header__titulo {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .seccion-lanzamiento__titulo, .seccion-videoclip__titulo {
+    text-align: center;
+  }
+  .seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
+    min-height: auto;
+    height: 10rem;
   }
 }
 @media screen and (max-width: 468px) {

@@ -1,18 +1,17 @@
 /*------------------------ESTILOS NAVBAR-------------------------------------------------------------*/
 .nav-bar {
-  @include mixin-flex-row(nowrap,center,center,0rem);
   background-color: $color-navbar;
   box-shadow: 0rem 0.125rem 1rem black;
-  width: 100%;
   
   #check {
     display: none;
   }
 
   &__menu {
-    @include width-height(80%,5rem);
     @include mixin-flex-row(nowrap,center,space-between,0rem);
-    
+    height: 5rem;
+    width: 80%;
+    margin: auto;
   }
 
   &__item { 

@@ -1,0 +1,11 @@
+@include responsive-design ( 1650px ) {
+  .seccion-tienda {
+    &__grilla {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+
+  

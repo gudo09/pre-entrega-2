@@ -45,3 +45,81 @@
     @content;
   }
 }
+
+@mixin nav-bar-responsive () {
+  .nav-bar {
+    background-color: $color-negro;
+  
+  
+    &__menu {
+      @include mixin-flex-col( nowrap, flex-start, center, 0rem);
+      @include width-height(70%, 100vh);
+      position: fixed;
+      top: 0;
+      padding: {
+        top: 5vh;
+        bottom: 30vh;
+      }
+      right: -100%;
+      z-index: 100;
+      background-color: $color-navbar;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    &__item {
+      margin: {
+        top: 3.2rem;
+        left: 1rem;
+      }
+    }
+  
+    &__enlace {
+      padding: 10px;
+      text-decoration: none;
+      color: $color-blanco;
+      font-size: 1.5rem;
+    }
+  
+    &__close-menu, &__open-menu {
+      display: block;
+      position: absolute;
+      font-size: 2rem;
+      top: 0.7rem;
+      right: 2rem;
+      color: $color-blanco;
+    }
+  
+    &__open-menu {
+      cursor: pointer;
+      position: fixed;
+      z-index: 92;
+    }
+  }
+  
+  #check:checked ~ .nav-bar__menu {
+    right: 0;
+  }
+
+  .header {
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    z-index: 90;
+    box-shadow: 0.3125rem 0.3125rem 0.4rem rgba(black,.532);
+
+    &__titulo {
+      padding-left: 1rem;
+      font-size: 2rem;
+    }
+  }
+  main {
+    padding-top: 2rem;
+  }
+}
+
+@mixin eliminar-fondo-transparente {
+    border: none;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+}

@@ -1,26 +1,13 @@
 @include responsive-design ( 530px ) {
-/*----------------------------------header----------------------------------------*/
-  .banner-generico {
-    h1 {
-      font-size: 2rem;
+  .seccion-lanzamiento {
+    &__titulo {
+      text-align: center;
     }
-  }
-
-
-  /*----------------------------------navbar----------------------------------------*
-  
-  
-/*----------------------------------listado discos----------------------------------------*/
-  .ul-discos {
-    h2 {
-      text-align: center !important;
-    }
-  }
-
-  /*----------------------------------footer----------------------------------------*/
-  footer {
-    p {
-      font-size: 0.7rem;
+    .container {
+      &__spotify {
+        min-height: auto;
+        height: 10rem;
+      }
     }
   }
 }
