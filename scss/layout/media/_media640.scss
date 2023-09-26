@@ -11,4 +11,33 @@
       @include mixin-grid(1,stretch,center,2rem,0rem);
     }
   }
+
+  .formulario-contacto {
+    &__container {
+
+      &--pais {
+        grid-column: 1/-1;
+      }
+
+      &--nombre {
+        grid-column: 1/-1;
+      }
+
+      &--apellido {
+        grid-column: 1/-1;
+      }
+
+      &--asunto {
+        grid-column: 1/-1;
+      }
+      
+      &--telefono {
+        grid-column: 1/-1;
+      }
+
+      &--email {
+        grid-column: 1/-1;
+      }
+    }
+  }
 }

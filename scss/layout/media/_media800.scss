@@ -1,4 +1,12 @@
 @include responsive-design ( 800px ) {
-  
-
+  .formulario-contacto {
+    &__container {
+      &--telefono {
+        grid-column: 1/5;
+      }
+      &--email {
+        grid-column: 1/5;
+      }
+    }
+  }
 }

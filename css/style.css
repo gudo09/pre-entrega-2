@@ -667,10 +667,10 @@ ul {
   grid-column: 5/7;
 }
 .formulario-contacto__container--email {
-  grid-column: 1/4;
+  grid-column: 4/7;
 }
 .formulario-contacto__container--telefono {
-  grid-column: 4/7;
+  grid-column: 1/4;
 }
 .formulario-contacto__container--asunto {
   grid-column: 1/5;
@@ -781,8 +781,25 @@ ul {
   .seccion-tienda__titulo {
     padding: 0rem 2rem;
   }
+  .formulario-contacto__container--pais {
+    grid-column: 1/4;
+  }
+  .formulario-contacto__container--nombre {
+    grid-column: 1/4;
+  }
+  .formulario-contacto__container--apellido {
+    grid-column: 4/7;
+  }
   .footer__copyright-texto {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .formulario-contacto__container--telefono {
+    grid-column: 1/5;
+  }
+  .formulario-contacto__container--email {
+    grid-column: 1/5;
   }
 }
 @media screen and (max-width: 768px) {
@@ -856,15 +873,6 @@ ul {
   .body-index {
     background-position-y: 4rem;
   }
-  .seguinos {
-    margin: 2rem 0rem;
-  }
-  .seguinos__titulo {
-    font-size: 1.5rem;
-  }
-  .seguinos__imagen {
-    height: 3rem;
-  }
   .seccion-transparente, .seccion-novedades, .seccion-discografia, .seccion-discografia__lista, .seccion-tienda, .seccion-tienda__remeras, .seccion-tienda__discos, .seccion-shows, .seccion-shows__lista {
     width: 100%;
     background: rgba(255, 255, 255, 0);
@@ -929,6 +937,22 @@ ul {
     justify-items: center;
     max-width: 90%;
   }
+  .main-contacto {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  .formulario-contacto__container--pais {
+    grid-column: 1/5;
+  }
+  .seguinos {
+    margin: 2rem 0rem;
+  }
+  .seguinos__titulo {
+    font-size: 1.5rem;
+  }
+  .seguinos__imagen {
+    height: 3rem;
+  }
 }
 @media screen and (max-width: 640px) {
   .header__titulo {
@@ -943,6 +967,24 @@ ul {
     row-gap: 2rem;
     column-gap: 0rem;
   }
+  .formulario-contacto__container--pais {
+    grid-column: 1/-1;
+  }
+  .formulario-contacto__container--nombre {
+    grid-column: 1/-1;
+  }
+  .formulario-contacto__container--apellido {
+    grid-column: 1/-1;
+  }
+  .formulario-contacto__container--asunto {
+    grid-column: 1/-1;
+  }
+  .formulario-contacto__container--telefono {
+    grid-column: 1/-1;
+  }
+  .formulario-contacto__container--email {
+    grid-column: 1/-1;
+  }
 }
 @media screen and (max-width: 530px) {
   .seccion-lanzamiento__titulo, .seccion-videoclip__titulo {
@@ -951,6 +993,17 @@ ul {
   .seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
     min-height: auto;
     height: 10rem;
+  }
+  .main-contacto {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+  }
+  .formulario-contacto__subtitulo {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+  }
+  .formulario-contacto__grupo-datos {
+    row-gap: 1rem;
   }
 }
 @media screen and (max-width: 468px) {
@@ -982,11 +1035,31 @@ ul {
   .seccion-transparente__titulo, .seccion-novedades__titulo, .seccion-discografia__titulo, .seccion-tienda__titulo, .seccion-shows__titulo {
     font-size: 1.8rem;
   }
+  .formulario-contacto__titulo {
+    font-size: 2.5rem;
+  }
+  .formulario-contacto__subtitulo {
+    font-size: 1.2rem;
+  }
+  .formulario-contacto__label {
+    font-size: 1.2rem;
+  }
+  .formulario-contacto__input, .formulario-contacto__textarea {
+    font-size: 1rem;
+  }
+  .formulario-contacto__textarea {
+    height: 15rem;
+  }
   .seguinos__imagen {
     height: 2.5rem;
   }
   .footer__copyright-texto {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .formulario-contacto__input, .formulario-contacto__textarea {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 320px) {

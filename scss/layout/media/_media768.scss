@@ -12,19 +12,7 @@
 
   .body-index {
     background-position-y: 4rem;
-  }
-
-  .seguinos {
-    margin: 2rem 0rem;
-
-    &__titulo {
-      font-size: 1.5rem;
-    }
-    
-    &__imagen {
-      height: 3rem;
-    }
-  }
+  }  
 
   .seccion-transparente {
     width: 100%;
@@ -89,4 +77,33 @@
       max-width: 90%;
     }
   }
+
+  .main-contacto{
+    padding: {
+      top: 6rem;
+      bottom: 3rem;
+    }
+  }
+
+  .formulario-contacto {
+    &__container {
+      &--pais {
+        grid-column: 1/5;
+      }
+    }
+  }
+
+  .seguinos {
+    margin: 2rem 0rem;
+
+    &__titulo {
+      font-size: 1.5rem;
+    }
+    
+    &__imagen {
+      height: 3rem;
+    }
+  }
+
+  
 }

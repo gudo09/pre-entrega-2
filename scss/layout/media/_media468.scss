@@ -37,6 +37,28 @@
     font-size: 1.8rem;
   }
   
+  .formulario-contacto {
+    &__titulo {
+      font-size: 2.5rem;
+    }
+
+    &__subtitulo {
+      font-size: 1.2rem;
+    }
+
+    &__label {
+      font-size: 1.2rem;
+    }
+
+    &__input {
+      font-size: 1rem;
+    }
+
+    &__textarea {
+      height: 15rem;
+    }
+  }
+
   .seguinos {
     &__imagen {
       height: 2.5rem;

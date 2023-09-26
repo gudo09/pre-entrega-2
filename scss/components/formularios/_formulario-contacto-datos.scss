@@ -20,11 +20,11 @@
     }
 
     &--email {
-      grid-column: 1/4;
+      grid-column: 4/7;
     }
 
     &--telefono {
-      grid-column: 4/7;
+      grid-column: 1/4;
     }
 
     &--asunto {
@@ -35,7 +35,6 @@
       grid-column: 1/-1;
     }
   }
-
 
   &__label {
     font: {

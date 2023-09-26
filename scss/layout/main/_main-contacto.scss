@@ -1,6 +1,6 @@
 /*------------------------ESTILOS MAIN CONTACTO-------------------------------------------------------------*/
 .main-contacto {
- @include mixin-flex-row(nowrap, center, center, 0rem);
+  @include mixin-flex-row(nowrap, center, center, 0rem);
   padding: {
     top: 4rem;
     bottom: 8rem;
@@ -11,4 +11,4 @@
     size: cover;
     position: center;
   }
-}
+} 

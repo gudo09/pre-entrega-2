@@ -10,4 +10,22 @@
       }
     }
   }
+
+  .main-contacto{
+    padding: {
+      top: 4rem;
+      bottom: 0rem;
+    }
+  }
+
+  .formulario-contacto{
+    &__subtitulo {
+      margin: 2rem 0;
+      font-size: 1.5rem;
+    }
+
+    &__grupo-datos {
+      row-gap: 1rem;
+    }
+  }
 }

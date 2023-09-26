@@ -1,0 +1,7 @@
+@include responsive-design(380px) {
+  .formulario-contacto{
+    &__input {
+      font-size: 0.8rem;
+    }
+  }
+}
