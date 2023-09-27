@@ -482,10 +482,10 @@ ul {
   width: 80%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.75rem;
+  gap: 0rem;
   background-color: #f2efef;
   border-radius: 1.25rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.532);
@@ -496,16 +496,18 @@ ul {
   flex-direction: row-reverse;
 }
 .card-show__fecha {
-  width: 300px;
-  height: 280px;
+  min-width: 17.5rem;
+  height: 17.5rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  gap: 0rem;
+  margin: 2rem;
   background-color: #fdfdfb;
   border-radius: 20px;
   border: 0.12rem rgba(29, 31, 31, 0.8588235294) solid;
-  margin: 2rem;
 }
 .card-show__fecha .fecha-show__dia-semana {
   font-weight: 600;
@@ -526,8 +528,11 @@ ul {
 .card-show__texto {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: stretch;
   gap: 0.75rem;
-  margin: 3rem 0rem;
+  margin: 3rem 2rem 3rem 0rem;
 }
 .card-show__texto .texto-show__lugar {
   font-size: 3rem;
@@ -535,6 +540,9 @@ ul {
 .card-show__texto .texto-show__precio {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: stretch;
   gap: 1rem;
 }
 .card-show__texto .texto-show__precio p:nth-child(2) {
@@ -542,6 +550,10 @@ ul {
 }
 .card-show__texto--reverse {
   align-items: flex-end;
+  margin: 3rem 0rem 3rem 2rem;
+}
+.card-show__texto--reverse .texto-show__lugar {
+  text-align: right;
 }
 
 /*------------------------ESTILOS BOTONES-------------------------------------------------------------*/
@@ -781,6 +793,9 @@ ul {
   .seccion-tienda__titulo {
     padding: 0rem 2rem;
   }
+  .card-show {
+    width: 100%;
+  }
   .formulario-contacto__container--pais {
     grid-column: 1/4;
   }
@@ -937,6 +952,35 @@ ul {
     justify-items: center;
     max-width: 90%;
   }
+  .card-show {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    width: 70%;
+    min-width: 20rem;
+    height: auto;
+    padding-bottom: 2rem;
+    align-self: center;
+  }
+  .card-show--reverse {
+    align-self: center;
+  }
+  .card-show__texto {
+    margin: auto;
+    align-items: center;
+  }
+  .card-show__texto--reverse {
+    align-items: center;
+  }
+  .card-show__texto--reverse .texto-show__lugar {
+    text-align: center;
+  }
+  .card-show__texto .texto-show__lugar {
+    text-align: center;
+  }
   .main-contacto {
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -1034,6 +1078,22 @@ ul {
   }
   .seccion-transparente__titulo, .seccion-novedades__titulo, .seccion-discografia__titulo, .seccion-tienda__titulo, .seccion-shows__titulo {
     font-size: 1.8rem;
+  }
+  .card-show {
+    min-width: 15rem;
+  }
+  .card-show__fecha {
+    min-width: 14rem;
+    height: 14rem;
+  }
+  .card-show__texto .texto-show__lugar {
+    font-size: 2rem;
+  }
+  .btn-comprar-entradas {
+    margin-top: 1rem;
+    width: 10rem;
+    padding: 0.4rem;
+    font-size: 1rem;
   }
   .formulario-contacto__titulo {
     font-size: 2.5rem;

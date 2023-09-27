@@ -36,6 +36,34 @@
   .seccion-transparente__titulo {
     font-size: 1.8rem;
   }
+
+  .card-show {
+    min-width: 15rem;
+
+    &__fecha{
+      min-width: 14rem;
+      height: 14rem;
+      .fecha-show {
+        
+      }
+
+    }
+
+    &__texto{
+      .texto-show {
+        &__lugar {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .btn-comprar-entradas {
+    margin-top: 1rem;
+    width: 10rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
   
   .formulario-contacto {
     &__titulo {

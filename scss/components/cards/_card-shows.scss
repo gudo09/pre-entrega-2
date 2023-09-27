@@ -1,7 +1,7 @@
 
 .card-show {
   width: 80%;
-  @include mixin-flex-row( wrap, center, flex-start, 1.75rem);
+  @include mixin-flex-row( nowrap, center, flex-start, 0rem);
   background-color: $color-fondo-card-shows;
   border-radius: 1.25rem;
   box-shadow: 1rem 1rem 1rem $color-sombra;
@@ -14,16 +14,13 @@
   
 
   &__fecha {
-    width: 300px;
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fdfdfb;
+    min-width: 17.5rem;
+    height: 17.5rem;
+    @include mixin-flex-col(nowrap, center,center,0rem);
+    margin: 2rem;
+    background-color: $color-fondo-card-shows-fecha;
     border-radius: 20px;
     border: 0.12rem #1d1f1fdb solid;
-    margin: 2rem;
 
     .fecha-show {
       &__dia-semana {
@@ -50,12 +47,8 @@
 
   
   &__texto {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin: 3rem 0rem;
-
-
+    @include mixin-flex-col(nowrap,stretch,stretch,0.75rem);
+    margin: 3rem 2rem 3rem 0rem;
 
     .texto-show {
       &__lugar {
@@ -63,9 +56,7 @@
       }
 
       &__precio {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
+        @include mixin-flex-row(nowrap,stretch,stretch,1rem);
 
         p:nth-child(2) {
           font-weight: 600;
@@ -75,6 +66,11 @@
 
     &--reverse {
       align-items: flex-end;
+      margin: 3rem 0rem 3rem 2rem;
+
+      .texto-show__lugar {
+        text-align: right;
+      }
     }
   }
 

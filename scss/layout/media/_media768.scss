@@ -78,6 +78,40 @@
     }
   }
 
+  .card-show{
+    @include mixin-flex-col(nowrap,center,center,0rem);
+    width: 70%;
+    min-width: 20rem;
+    height: auto;
+    padding-bottom: 2rem;
+    align-self: center;
+
+    &--reverse {
+      align-self: center;
+    }
+
+    &__texto {
+      margin: auto;
+      align-items: center;
+
+      &--reverse {
+        align-items: center;
+        
+        .texto-show {
+          &__lugar {
+            text-align: center;
+          }
+        }
+      }
+
+      .texto-show {
+        &__lugar {
+          text-align: center;
+        }
+      }
+    }
+  }
+
   .main-contacto{
     padding: {
       top: 6rem;
