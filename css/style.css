@@ -252,8 +252,9 @@ ul {
   font-size: 2.3rem;
 }
 .seccion-lanzamiento__texto, .seccion-videoclip__texto {
+  text-indent: 1rem;
   font-size: 1.5625rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .seccion-lanzamiento__spotify, .seccion-videoclip__youtube {
   position: absolute;
@@ -287,7 +288,7 @@ ul {
 }
 .seccion-videoclip__texto {
   color: #f4f4ee;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   width: 60%;
 }
 .seccion-videoclip .container__youtube {
@@ -781,6 +782,7 @@ ul {
     width: 100%;
   }
   .seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
+    margin-top: 1rem;
     min-height: 22rem;
   }
   .seccion-tienda {
@@ -1002,6 +1004,9 @@ ul {
   .header__titulo {
     font-size: 1.5rem;
   }
+  .seccion-lanzamiento__texto, .seccion-videoclip__texto {
+    font-size: 1.3rem;
+  }
   .seccion-tienda__grilla {
     width: 100%;
     display: grid;
@@ -1053,6 +1058,12 @@ ul {
 @media screen and (max-width: 468px) {
   /*----------------------------------header----------------------------------------*/
   .header__titulo {
+    font-size: 1rem;
+  }
+  .seccion-lanzamiento__titulo, .seccion-videoclip__titulo {
+    font-size: 1.6rem;
+  }
+  .seccion-lanzamiento__texto, .seccion-videoclip__texto {
     font-size: 1rem;
   }
   .card-discografia {
@@ -1118,6 +1129,15 @@ ul {
   }
 }
 @media screen and (max-width: 380px) {
+  .seccion-lanzamiento__spotify, .seccion-videoclip__youtube {
+    max-height: 5rem;
+  }
+  .seccion-lanzamiento .container__spotify, .seccion-videoclip .container__spotify, .seccion-videoclip .container__youtube {
+    height: auto;
+  }
+  .seccion-videoclip__youtube {
+    max-height: none;
+  }
   .formulario-contacto__input, .formulario-contacto__textarea {
     font-size: 0.8rem;
   }

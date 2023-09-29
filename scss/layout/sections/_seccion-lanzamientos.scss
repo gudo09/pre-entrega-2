@@ -17,8 +17,9 @@
   }
 
   &__texto {
+    text-indent: 1rem;
     font-size: 1.5625rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   &__spotify {
@@ -42,10 +43,7 @@
       padding-bottom: 33%;
     }
   }
-
-  
 }
-
 
 .seccion-videoclip {
   @extend .seccion-lanzamiento;
@@ -67,7 +65,7 @@
   &__texto {
     @extend .seccion-lanzamiento__texto;
     color: $color-blanco;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     width: 60%;
   }
 

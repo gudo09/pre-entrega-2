@@ -6,6 +6,16 @@
     }
   }
   
+  .seccion-lanzamiento {
+    &__titulo {
+      font-size: 1.6rem;
+    }
+
+    &__texto {
+      font-size: 1rem;
+    }
+  }
+
   .card-discografia {
     min-width: 16rem;
     max-width: 100%;

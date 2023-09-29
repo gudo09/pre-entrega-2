@@ -5,6 +5,12 @@
     }
   }
 
+  .seccion-lanzamiento{
+    &__texto {
+      font-size: 1.3rem;
+    }
+  }
+
   .seccion-tienda {
     &__grilla {
       width: 100%;

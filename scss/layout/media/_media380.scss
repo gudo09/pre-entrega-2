@@ -1,4 +1,23 @@
 @include responsive-design(380px) {
+  .seccion-lanzamiento {
+    &__spotify {
+      max-height: 5rem;
+    }
+
+    .container {
+      &__spotify {
+        height: auto;
+      }
+    }
+  }
+
+  .seccion-videoclip {
+    &__youtube {
+      max-height: none;
+    }
+  }
+
+  
   .formulario-contacto{
     &__input {
       font-size: 0.8rem;
