@@ -32,7 +32,8 @@
 ### 29-09-2023 - The final update (Entrega proyecto final)
 
 ##### Para finalizar con el proyecto se aplica el diseño responsivo a todos los HTML !!!! Había tenido un inconveniente para concretar la tercera entrega que se exigían 3 HTML completamente responsivos, objetivo el cual no pude lograr en su momento debido a que quería asimilar conocimientos sólidos en CSS puro y había decidido prescindir de la implementación de Bootstrap en el proyecto.
-#####Analizando el código, llegué a la conclusión de que mi problema era la especificidad de los estilos en las mediaqueries. Una vez detectado mi error, me dispuse a implementar la metodología BEM (Block Element Modifier) para nombrar las clases de los HTML, lo cual me resultó extremadamente cómodo para hacer el diseño responsivo y poder entregar el proyecto final en tiempo y forma.
-#####A continuación dejo los enlaces de los deploy que hice tanto en Vercel como en Netlify.
+
+##### Analizando el código, llegué a la conclusión de que mi problema era la especificidad de los estilos en las mediaqueries. Una vez detectado mi error, me dispuse a implementar la metodología BEM (Block Element Modifier) para nombrar las clases de los HTML, lo cual me resultó extremadamente cómodo para hacer el diseño responsivo y poder entregar el proyecto final en tiempo y forma.
+##### A continuación dejo los enlaces de los deploy que hice tanto en Vercel como en Netlify.
 [https://pre-entrega-2.vercel.app/#](https://pre-entrega-2.vercel.app/# "https://pre-entrega-2.vercel.app/#")
 [https://gudo09-cuartetodenos.netlify.app/](https://gudo09-cuartetodenos.netlify.app/ "https://gudo09-cuartetodenos.netlify.app/")
